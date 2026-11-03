@@ -1,4 +1,3 @@
-<!-- Fundo dos botões em ogiva (mostarda). Usado com border-image: as pontas não esticam, só o meio. -->
 <svg xmlns='http://www.w3.org/2000/svg' width='140' height='56' viewBox='0 0 140 56'>
   <path d='M28 3H112C123 6 128 18 136 28C128 38 123 50 112 53H28C17 50 12 38 4 28C12 18 17 6 28 3Z' fill='#D4A23A'/>
   <path d='M30 8H110C118 11 122 20 128 28C122 36 118 45 110 48H30C22 45 18 36 12 28C18 20 22 11 30 8Z' fill='none' stroke='#8A6514'/>

@@ -1,0 +1,9 @@
+<!-- Ornamento com estrela embaixo dos títulos das seções. -->
+<svg xmlns='http://www.w3.org/2000/svg' width='180' height='16' viewBox='0 0 180 16'>
+  <g fill='none' stroke='#4D5BD8' stroke-linecap='round'>
+  <path d='M8 8 H70 C76 8 78 3 82 3 M172 8 H110 C104 8 102 3 98 3 M70 8 C76 8 78 13 82 13 M110 8 C104 8 102 13 98 13'/>
+  </g>
+  <path d='M90 0 C90.7 5.6 92.4 7.3 98 8 C92.4 8.7 90.7 10.4 90 16 C89.3 10.4 87.6 8.7 82 8 C87.6 7.3 89.3 5.6 90 0Z' fill='#7C88EE'/>
+  <circle cx='5' cy='8' r='1.5' fill='#4D5BD8'/>
+  <circle cx='175' cy='8' r='1.5' fill='#4D5BD8'/>
+</svg>

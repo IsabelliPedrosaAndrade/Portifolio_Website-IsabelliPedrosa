@@ -1,0 +1,6 @@
+<!-- Fundo dos botões em ogiva da ficha (tinta azul cheia). -->
+<svg xmlns='http://www.w3.org/2000/svg' width='140' height='56' viewBox='0 0 140 56'>
+  <path d='M28 3H112C123 6 128 18 136 28C128 38 123 50 112 53H28C17 50 12 38 4 28C12 18 17 6 28 3Z' fill='#2A3285'/>
+  <path d='M30 8H110C118 11 122 20 128 28C122 36 118 45 110 48H30C22 45 18 36 12 28C18 20 22 11 30 8Z' fill='none' stroke='#E9EBF0' stroke-opacity='.4'/>
+  <path d='M19 28l4-4.5 4 4.5-4 4.5zM113 28l4-4.5 4 4.5-4 4.5z' fill='#E9EBF0' fill-opacity='.7'/>
+</svg>

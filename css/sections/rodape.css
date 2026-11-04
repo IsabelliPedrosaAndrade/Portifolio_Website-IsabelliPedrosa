@@ -1,0 +1,9 @@
+.rodape { padding-top: 40px; text-align: center; }
+.rodape-nome {
+  padding: 26px var(--borda-pagina) 22px;
+  font: 500 .74rem var(--f-versalete);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--apagado);
+}
+.renda-rodape { height: 42px; background: url("../../img/ornamentos/renda.svg") 0 0 / 64px 42px repeat-x; }

@@ -1,0 +1,162 @@
+.abertura {
+  position: relative;
+  display: grid;
+  gap: 44px;
+  align-items: center;
+  min-height: 100svh;
+  padding: 104px var(--borda-pagina) 56px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.abertura-texto { width: 100%; max-width: 640px; container-type: inline-size; }
+
+.nome {
+  margin: .4em 0 0;
+  font: 400 clamp(3rem, 21cqi, 7.2rem)/1.05 var(--f-gotica);
+  color: var(--osso);
+
+  text-shadow: 0 0 18px rgba(124, 136, 238, .55), 0 0 46px rgba(77, 91, 216, .5), 0 2px 0 rgba(42, 50, 133, .6);
+}
+.nome-1, .nome-2 { display: block; }
+.nome-2 { font-size: .62em; margin-top: .05em; }
+
+.nome-ornamento {
+  display: block;
+  width: min(320px, 82%); height: 38px;
+  margin: .5em 0 .55em -4px;
+  color: var(--violeta);
+}
+
+.titulo-cargo {
+  font: 500 clamp(1rem, 2.6vw, 1.4rem)/1.3 var(--f-versalete);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--violeta-claro);
+}
+
+.frase {
+  margin-top: 1.1em;
+  max-width: 30ch;
+  font-size: clamp(1.25rem, 3.2vw, 1.55rem);
+  line-height: 1.45;
+  font-style: italic;
+  color: var(--osso);
+}
+
+.selo-disponivel {
+  display: inline-flex; align-items: center; gap: 10px;
+  margin-top: 1.4em;
+  padding: .45em 1em .45em .8em;
+  font: 500 .74rem/1.3 var(--f-mono);
+  letter-spacing: .04em;
+  color: var(--osso);
+  border: 1px solid rgba(212, 162, 58, .55);
+  border-radius: 999px;
+  background: rgba(212, 162, 58, .08);
+}
+.selo-ponto {
+  position: relative;
+  flex: none;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--mostarda);
+}
+
+.selo-ponto::after {
+  content: "";
+  position: absolute; inset: 0;
+  border-radius: 50%;
+  border: 1px solid var(--mostarda);
+  animation: pulsar-selo 2.4s ease-out infinite;
+}
+@keyframes pulsar-selo {
+  from { transform: scale(1); opacity: .8; }
+  70%, 100% { transform: scale(3); opacity: 0; }
+}
+
+.acoes { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 18px; margin-top: 2em; }
+
+.acoes-redes { display: flex; gap: 10px; }
+.acoes-redes a {
+  width: 46px; height: 46px;
+  display: grid; place-items: center;
+  color: var(--violeta-claro);
+  border: 1px solid rgba(124, 136, 238, .45);
+  border-radius: 50%;
+  background: rgba(11, 13, 20, .6);
+  transition: color .3s, border-color .3s, box-shadow .3s;
+}
+.acoes-redes a:hover {
+  color: var(--osso);
+  border-color: var(--violeta-claro);
+  box-shadow: 0 0 14px rgba(124, 136, 238, .5);
+}
+.acoes-redes svg { width: 19px; height: 19px; }
+
+.janela {
+  position: relative;
+  width: min(86vw, 400px);
+  aspect-ratio: 480 / 700;
+  justify-self: center;
+}
+
+.janela-vidro {
+  position: absolute;
+  left: 8.3333%; top: 8.5714%;
+  width: 83.3333%; height: 85.7143%;
+  overflow: hidden;
+
+  clip-path: url(#clip-janela);
+  background: radial-gradient(ellipse at 50% 55%, #121633 0%, #090a12 70%);
+}
+
+.janela-vitral {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+}
+
+.janela-vidro canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+.bn-estrela {
+  position: absolute;
+  left: 19%; top: 57%;
+  width: 16px; height: 16px;
+  color: var(--mostarda);
+  filter: drop-shadow(0 0 6px var(--mostarda));
+  animation: pulsar-estrela 3s ease-in-out infinite;
+}
+@keyframes pulsar-estrela { 50% { scale: .8; } }
+
+.guardanapo-abertura { display: none; }
+
+@media (max-width: 768px) {
+  .janela { display: none; }
+  .guardanapo-abertura {
+    display: block;
+    width: min(760px, 170vw);
+    opacity: .35;
+  }
+  .abertura { overflow: clip; justify-items: center; text-align: center; }
+  .abertura-texto { position: relative; z-index: 1; margin: 0 auto; }
+  .nome-ornamento, .frase { margin-left: auto; margin-right: auto; }
+  .acoes, .acoes-redes { justify-content: center; }
+  .selo-disponivel { font-size: .66rem; letter-spacing: 0; }
+}
+
+@media (min-width: 769px) {
+  .abertura {
+
+    grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+    gap: clamp(24px, 4.5vw, 88px);
+    padding-top: 96px;
+  }
+  .janela {
+    order: -1;
+    width: min(100%, calc(min(84svh, 780px) * 480 / 700));
+  }
+}
+@media (min-width: 1100px) {
+  .abertura { grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr); }
+}

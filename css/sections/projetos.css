@@ -1,0 +1,193 @@
+.relicarios {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  margin: 0 calc(var(--borda-pagina) * -1);
+  padding: 12px var(--borda-pagina) 20px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--violeta-fundo) transparent;
+}
+.relicario { flex: 0 0 min(80%, 330px); scroll-snap-align: center; display: flex; }
+@media (min-width: 900px) {
+  .relicarios {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(28px, 3.4vw, 52px);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: visible;
+  }
+}
+
+.relicario-botao {
+  display: flex; flex-direction: column;
+  width: 100%;
+  padding: 0;
+  text-align: left;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  transition: transform .6s cubic-bezier(.2, .8, .2, 1), opacity .5s, filter .5s;
+}
+.relicario-botao:focus-visible { outline: none; }
+.relicario-botao:focus-visible .relicario-nome { text-decoration: underline dashed var(--violeta-claro); text-underline-offset: .2em; }
+
+@media (hover: hover) and (min-width: 900px) {
+  .relicario-botao:hover, .relicario-botao:focus-visible { transform: translateY(-10px) scale(1.035); }
+  .relicarios:hover .relicario-botao:not(:hover) { opacity: .7; filter: saturate(.7); }
+  .relicario-menor .relicario-botao:hover { transform: translateY(-6px) scale(1.03); }
+}
+
+.relicario-moldura {
+  position: relative;
+  display: block;
+  aspect-ratio: 360 / 456;
+}
+.relicario-ornamento {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  transition: filter .5s;
+}
+.relicario-botao:hover .relicario-ornamento,
+.relicario-botao:focus-visible .relicario-ornamento {
+  filter: brightness(1.5) drop-shadow(0 0 6px rgba(124, 136, 238, .6));
+}
+
+.relicario-imagem {
+  position: absolute;
+  left: 10.8%; right: 10.8%; top: 11.2%; bottom: 3.1%;
+  overflow: hidden;
+  clip-path: url(#clip-arco);
+  background:
+    radial-gradient(1px 1px at 22% 30%, rgba(236, 232, 225, .9), transparent),
+    radial-gradient(1px 1px at 70% 18%, rgba(236, 232, 225, .7), transparent),
+    radial-gradient(1.5px 1.5px at 82% 52%, rgba(124, 136, 238, .9), transparent),
+    radial-gradient(1px 1px at 35% 68%, rgba(236, 232, 225, .6), transparent),
+    radial-gradient(1px 1px at 58% 84%, rgba(124, 136, 238, .8), transparent),
+    radial-gradient(1px 1px at 14% 88%, rgba(236, 232, 225, .5), transparent),
+    radial-gradient(ellipse 80% 55% at 50% 78%, rgba(77, 91, 216, .45), transparent 70%),
+    radial-gradient(ellipse at 50% 40%, #161B3D, #090A12 80%);
+}
+
+.relicario-letra {
+  position: absolute; inset: 0;
+  display: grid; place-items: center;
+  font: 400 clamp(4.5rem, 9vw, 6.5rem)/1 var(--f-gotica-clara);
+  color: var(--osso);
+  text-shadow: 0 0 18px rgba(124, 136, 238, .9), 0 0 42px rgba(77, 91, 216, .7);
+  transition: transform 1s cubic-bezier(.2, .8, .2, 1), text-shadow .6s;
+}
+.relicario-letra::after {
+  content: "✦";
+  position: absolute; left: 50%; top: 22%;
+  translate: -50% 0;
+  font: .9rem var(--f-texto);
+  color: var(--mostarda);
+  text-shadow: 0 0 8px var(--mostarda);
+}
+.relicario-botao:hover .relicario-letra { transform: scale(1.06); text-shadow: 0 0 24px rgba(124, 136, 238, 1), 0 0 60px rgba(77, 91, 216, .9); }
+
+.relicario-imagem img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.15) brightness(.9);
+  transform: scale(1.05);
+  transition: filter .9s, transform 1.2s cubic-bezier(.2, .8, .2, 1);
+}
+.relicario-imagem:has(img)::before,
+.relicario-imagem:has(img)::after {
+  content: "";
+  position: absolute; inset: 0;
+  pointer-events: none;
+  transition: opacity .8s;
+}
+.relicario-imagem:has(img)::before { background: linear-gradient(180deg, #4D5BD8, #2A3285); mix-blend-mode: color; }
+.relicario-imagem:has(img)::after { background: radial-gradient(circle, transparent 0 .9px, rgba(9, 10, 18, .45) 1.3px) 0 0 / 3px 3px; }
+.relicario-botao:hover .relicario-imagem img,
+.relicario-botao:focus-visible .relicario-imagem img { filter: none; transform: none; }
+.relicario-botao:hover .relicario-imagem::before, .relicario-botao:hover .relicario-imagem::after,
+.relicario-botao:focus-visible .relicario-imagem::before, .relicario-botao:focus-visible .relicario-imagem::after { opacity: 0; }
+@media (hover: none) {
+  .relicario-imagem img { filter: none; transform: none; }
+  .relicario-imagem:has(img)::before, .relicario-imagem:has(img)::after { opacity: 0; }
+}
+
+.relicario-info { display: block; padding: 22px 6px 0; }
+.relicario-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.selo-formato {
+  display: inline-flex; align-items: center; gap: .4em;
+  padding: .28em .7em;
+  font: 600 .62rem/1.2 var(--f-versalete);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  border: 1px solid var(--violeta);
+  border-radius: 999px;
+  background: rgba(77, 91, 216, .12);
+}
+.selo-formato::before { content: "✦"; color: var(--violeta-claro); }
+.relicario-nome {
+  display: block;
+  margin-top: 10px;
+  font: 400 clamp(1.7rem, 2.6vw, 2.1rem)/1.1 var(--f-gotica-clara);
+  color: var(--osso);
+}
+.relicario-sub { display: block; margin-top: 4px; font-style: italic; color: var(--violeta-claro); }
+.relicario-resumo { display: block; margin: 12px 0 14px; color: var(--apagado); font-size: 1.02rem; line-height: 1.5; }
+.relicario-info .tags { margin-bottom: 16px; }
+.relicario-ver {
+  display: inline-flex; gap: .5em;
+  font: 600 .72rem var(--f-versalete);
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--violeta-claro);
+}
+.relicario-ver::after { content: "→"; font-family: var(--f-texto); transition: transform .3s; }
+.relicario-botao:hover .relicario-ver::after { transform: translateX(4px); }
+
+.outros { max-width: 1060px; margin: clamp(64px, 9vw, 110px) auto 0; }
+.outros-titulo { display: flex; justify-content: center; align-items: center; gap: .6em; color: var(--osso); margin-bottom: 20px; }
+
+.filtros { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 0 0 36px; padding: 0; border: 0; }
+.filtros label {
+  min-height: 40px;
+  display: inline-flex; align-items: center;
+  padding: 0 1.1em;
+  font: 600 .66rem/1 var(--f-versalete);
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--apagado);
+  border: 1px solid var(--linha);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: color .3s, border-color .3s, background-color .3s;
+}
+.filtros label:hover { color: var(--osso); border-color: var(--violeta); }
+.filtros input:checked + label { color: var(--osso); border-color: var(--violeta-claro); background: rgba(77, 91, 216, .16); }
+.filtros input:checked + label::before { content: "✦\00a0"; color: var(--violeta-claro); }
+.filtros input:focus-visible + label { outline: 2px dashed var(--violeta-claro); outline-offset: 3px; }
+
+.relicarios-menores {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+  gap: 34px 24px;
+}
+.relicario-menor { animation: surgir .5s ease both; }
+.relicario-menor .relicario-moldura { aspect-ratio: 360 / 280; }
+.relicario-menor .relicario-imagem { top: 12.5%; bottom: 5%; }
+.relicario-menor .relicario-letra { font-size: 3.4rem; }
+.relicario-menor .relicario-letra::after { top: 14%; }
+.relicario-menor .relicario-info { padding: 16px 6px 0; }
+.relicario-menor .relicario-nome { font-size: 1.3rem; margin-top: 6px; }
+.categoria { font: 500 .68rem var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--violeta-claro); }
+@keyframes surgir { from { opacity: 0; transform: translateY(10px); } }
+
+.outros:has(#filtro-web:checked) .relicario-menor:not([data-cat~="web"]),
+.outros:has(#filtro-jogos:checked) .relicario-menor:not([data-cat~="jogos"]),
+.outros:has(#filtro-iot:checked) .relicario-menor:not([data-cat~="iot"]),
+.outros:has(#filtro-design:checked) .relicario-menor:not([data-cat~="design"]),
+.outros:has(#filtro-hardware:checked) .relicario-menor:not([data-cat~="hardware"]) { display: none; }

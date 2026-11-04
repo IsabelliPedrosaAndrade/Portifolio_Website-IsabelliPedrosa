@@ -1,0 +1,94 @@
+.corrente {
+  --x: 20px;
+  position: relative;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+.corrente::before {
+  content: "";
+  position: absolute; top: 0; bottom: 0; left: var(--x);
+  width: 12px;
+  transform: translateX(-50%);
+  background: url("../../img/ornamentos/elo-corrente.svg") center top / 12px 24px repeat-y;
+}
+.corrente::after {
+  content: "";
+  position: absolute; top: 0; left: var(--x);
+  width: 2px; height: 100%;
+  transform: translateX(-50%);
+  transform-origin: top;
+  background: linear-gradient(var(--violeta-claro), var(--roxo));
+  box-shadow: 0 0 10px var(--violeta-claro);
+}
+@supports (animation-timeline: view()) {
+  .corrente::after {
+    animation: encher linear both;
+    animation-timeline: view();
+    animation-range: cover 35vh cover calc(100% - 65vh);
+  }
+}
+@keyframes encher { from { transform: translateX(-50%) scaleY(0); } to { transform: translateX(-50%) scaleY(1); } }
+
+.marco { position: relative; padding-left: 54px; margin-bottom: 34px; }
+.marco:last-child { margin-bottom: 0; }
+
+.marco-estrela {
+  position: absolute; top: 14px; left: var(--x);
+  z-index: 1;
+  width: 30px; height: 30px;
+  translate: -50% 0;
+  color: var(--violeta-claro);
+  filter: drop-shadow(0 0 6px var(--violeta-claro)) drop-shadow(0 0 2px #fff);
+  scale: 1.1;
+}
+.marco-estrela svg { width: 100%; height: 100%; animation: cintilar 4s ease-in-out infinite; }
+@supports (animation-timeline: view()) {
+  .marco-estrela, .marco-cartao {
+    animation: acender linear both;
+    animation-timeline: view();
+    animation-range: cover 30vh cover 40vh;
+  }
+  .marco-cartao { animation-name: acender-cartao; }
+}
+@keyframes acender { from { color: var(--violeta-fundo); filter: none; scale: .8; } }
+@keyframes acender-cartao { from { border-color: var(--linha); } }
+@keyframes cintilar { 0%, 100% { opacity: .8; transform: scale(.94) rotate(0); } 50% { opacity: 1; transform: scale(1.06) rotate(8deg); } }
+
+.marco-cartao {
+  position: relative;
+  max-width: 460px;
+  padding: 20px 22px 18px;
+  background: rgba(18, 21, 31, .9);
+  border: 1px solid rgba(77, 91, 216, .5);
+  outline: 1px solid rgba(77, 91, 216, .16);
+  outline-offset: -7px;
+}
+.marco-ano { font: 400 2.3rem/1 var(--f-gotica-clara); color: var(--violeta-claro); margin-bottom: 12px; }
+.marco-itens li { padding: 9px 0; border-top: 1px solid var(--linha); }
+.marco-itens li:first-child { border-top: 0; padding-top: 0; }
+.marco-titulo { display: block; color: var(--osso); line-height: 1.4; }
+.marco-linha { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin-top: 5px; }
+.marco-data { font: 500 .74rem var(--f-mono); color: var(--apagado); }
+
+.etiqueta {
+  padding: .2em .6em;
+  font: 500 .64rem/1.4 var(--f-mono);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  border: 1px solid;
+  border-radius: 2px;
+}
+.etiqueta-formacao { color: var(--violeta-claro); border-color: rgba(124, 136, 238, .5); }
+.etiqueta-projeto { color: var(--osso); border-color: var(--violeta); background: rgba(77, 91, 216, .22); }
+.etiqueta-evento { color: #B9A2EC; border-color: rgba(122, 85, 199, .6); }
+.etiqueta-premio { color: var(--mostarda); border-color: rgba(212, 162, 58, .55); }
+
+@media (min-width: 900px) {
+  .corrente { --x: 50%; }
+  .marco { width: 50%; padding: 0 58px 0 0; margin-bottom: -10px; }
+  .marco .marco-cartao { margin-left: auto; }
+  .marco-estrela { left: auto; right: 0; translate: 50% 0; }
+  .marco:nth-child(even) { margin-left: 50%; padding: 0 0 0 58px; }
+  .marco:nth-child(even) .marco-cartao { margin-left: 0; }
+  .marco:nth-child(even) .marco-estrela { right: auto; left: 0; translate: -50% 0; }
+}

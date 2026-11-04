@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,7 +37,6 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=New+Rocker&family=IBM+Plex+Mono:wght@400;500&family=Pinyon+Script&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=New+Rocker&family=IBM+Plex+Mono:wght@400;500&family=Pinyon+Script&display=swap" rel="stylesheet"></noscript>
-  <link rel="preload" href="fonts/lavishly-yours-latin.woff2" as="font" type="font/woff2" crossorigin>
 
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/componentes.css">
@@ -53,8 +52,6 @@
   <link rel="stylesheet" href="css/sections/pesquisa.css">
   <link rel="stylesheet" href="css/sections/contato.css">
   <link rel="stylesheet" href="css/sections/rodape.css">
-
-  <script>document.documentElement.classList.add('js');</script>
 
   <script type="application/ld+json">
   {
@@ -92,7 +89,6 @@
           <feFuncB type="table" tableValues="0.522 0.941"/>
         </feComponentTransfer>
       </filter>
-      <!-- pinta uma imagem só com azul-noite (sombras) e violeta (luzes): usado na capa pontilhada dos projetos -->
       <filter id="duotone-violeta" color-interpolation-filters="sRGB">
         <feColorMatrix type="matrix" values="0.299 0.587 0.114 0 0  0.299 0.587 0.114 0 0  0.299 0.587 0.114 0 0  0 0 0 1 0"/>
         <feComponentTransfer>
@@ -109,19 +105,19 @@
 
     <symbol id="faixa-sigilo" viewBox="0 0 320 40">
       <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round">
-        <path d="M160 3 L166.5 20 L160 37 L153.5 20 Z"/>
-        <path d="M160 12 L162.5 20 L160 28 L157.5 20 Z"/>
-        <path d="M153.5 20 C132 20 122 8 98 10 C82 11.5 72 18 42 20 L6 20"/>
-        <path d="M166.5 20 C188 20 198 8 222 10 C238 11.5 248 18 278 20 L314 20"/>
-        <path d="M150 23 C138 28 124 33 106 31 C96 30 90 25 82 27"/>
-        <path d="M170 23 C182 28 196 33 214 31 C224 30 230 25 238 27"/>
-        <path d="M124 13 C119 6 110 2.5 100 1.5"/>
-        <path d="M196 13 C201 6 210 2.5 220 1.5"/>
-        <path d="M62 18 L52 11 M62 22 L52 29"/>
-        <path d="M258 18 L268 11 M258 22 L268 29"/>
-        <path d="M140 31 L136 38 M180 31 L184 38"/>
+        <path pathLength="1" d="M160 3 L166.5 20 L160 37 L153.5 20 Z"/>
+        <path pathLength="1" d="M160 12 L162.5 20 L160 28 L157.5 20 Z"/>
+        <path pathLength="1" d="M153.5 20 C132 20 122 8 98 10 C82 11.5 72 18 42 20 L6 20"/>
+        <path pathLength="1" d="M166.5 20 C188 20 198 8 222 10 C238 11.5 248 18 278 20 L314 20"/>
+        <path pathLength="1" d="M150 23 C138 28 124 33 106 31 C96 30 90 25 82 27"/>
+        <path pathLength="1" d="M170 23 C182 28 196 33 214 31 C224 30 230 25 238 27"/>
+        <path pathLength="1" d="M124 13 C119 6 110 2.5 100 1.5"/>
+        <path pathLength="1" d="M196 13 C201 6 210 2.5 220 1.5"/>
+        <path pathLength="1" d="M62 18 L52 11 M62 22 L52 29"/>
+        <path pathLength="1" d="M258 18 L268 11 M258 22 L268 29"/>
+        <path pathLength="1" d="M140 31 L136 38 M180 31 L184 38"/>
       </g>
-      <path d="M6 20 l3 -2.4 l3 2.4 l-3 2.4z M308 20 l3 -2.4 l3 2.4 l-3 2.4z" fill="currentColor"/>
+      <path pathLength="1" d="M6 20 l3 -2.4 l3 2.4 l-3 2.4z M308 20 l3 -2.4 l3 2.4 l-3 2.4z" fill="currentColor"/>
     </symbol>
 
     <symbol id="filigrana" viewBox="0 0 80 80">
@@ -177,16 +173,14 @@
     <symbol id="i-documento" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 17v3h16v-3"/></g></symbol>
   </svg>
 
-  <div class="ceu-pontos" aria-hidden="true"></div>
   <canvas class="ceu" id="ceu" aria-hidden="true"></canvas>
-  <div class="estrela-cadente" aria-hidden="true"></div>
   <div class="moldura-lateral moldura-esq" aria-hidden="true"></div>
   <div class="moldura-lateral moldura-dir" aria-hidden="true"></div>
 
   <header class="topo" id="topo">
     <a class="marca" href="#inicio" aria-label="Isabelli Pedrosa Andrade — Portfólio, voltar ao início">
-      <img class="marca-imagem" id="marca-imagem" alt="" width="40" height="40">
-      <span class="marca-nome"><span data-campo="perfil.nome">Isabelli Pedrosa Andrade</span> <span class="marca-sufixo">— Portfólio</span></span>
+      <svg class="marca-estrela" aria-hidden="true"><use href="#estrela"/></svg>
+      <span class="marca-nome">Isabelli Pedrosa Andrade <span class="marca-sufixo">— Portfólio</span></span>
     </a>
     <nav class="menu" aria-label="Principal">
       <ul>
@@ -199,55 +193,57 @@
         <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
-    <a class="botao botao-contorno botao-pequeno js-curriculo" href="docs/curriculo-isabelli-pedrosa-andrade.pdf" target="_blank" rel="noopener">Currículo</a>
-    <button class="menu-abrir" type="button" aria-expanded="false" aria-controls="menu-tela" aria-label="Abrir menu">
+    <a class="botao botao-contorno botao-pequeno topo-curriculo" href="docs/curriculo-isabelli-pedrosa-andrade.pdf" target="_blank" rel="noopener">Currículo</a>
+    <button class="menu-abrir" type="button" popovertarget="menu-tela" aria-label="Abrir menu">
       <span></span><span></span><span></span>
     </button>
   </header>
 
-  <div class="menu-tela" id="menu-tela" hidden>
-    <div class="menu-tela-moldura">
-      <svg class="canto canto-se"><use href="#filigrana"/></svg>
-      <svg class="canto canto-sd"><use href="#filigrana"/></svg>
-      <svg class="canto canto-ie"><use href="#filigrana"/></svg>
-      <svg class="canto canto-id"><use href="#filigrana"/></svg>
+  <div class="menu-tela" id="menu-tela" popover>
+    <div class="menu-tela-topo">
       <p class="rotulo-mono">( MENU )</p>
-      <nav aria-label="Menu do celular">
-        <ul>
-          <li><a href="#sobre">Sobre mim</a></li>
-          <li><a href="#projetos">Projetos</a></li>
-          <li><a href="#formacao">Formação</a></li>
-          <li><a href="#trajetoria">Trajetória</a></li>
-          <li><a href="#conquistas">Conquistas</a></li>
-          <li><a href="#pesquisa">Pesquisa</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
-      <a class="botao botao-contorno js-curriculo" href="docs/curriculo-isabelli-pedrosa-andrade.pdf" target="_blank" rel="noopener">Currículo (PDF)</a>
-      <button class="menu-fechar" type="button" aria-label="Fechar menu"><svg><use href="#i-fechar"/></svg></button>
+      <button class="menu-fechar" type="button" popovertarget="menu-tela" popovertargetaction="hide" aria-label="Fechar menu"><svg><use href="#i-fechar"/></svg></button>
+    </div>
+    <svg class="menu-tela-faixa" viewBox="0 0 320 40" aria-hidden="true"><use href="#faixa-sigilo"/></svg>
+    <nav aria-label="Menu do celular">
+      <ol>
+        <li><a href="#sobre">Sobre mim</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#formacao">Formação</a></li>
+        <li><a href="#trajetoria">Trajetória</a></li>
+        <li><a href="#conquistas">Conquistas</a></li>
+        <li><a href="#pesquisa">Pesquisa</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ol>
+    </nav>
+    <div class="menu-tela-base">
+      <a class="botao botao-contorno botao-pequeno" href="docs/curriculo-isabelli-pedrosa-andrade.pdf" target="_blank" rel="noopener">Currículo (PDF)</a>
+      <ul class="acoes-redes">
+        <li><a href="https://www.linkedin.com/in/isabelli-pedrosa-632254391" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-linkedin"/></svg></a></li>
+        <li><a href="https://github.com/IsabelliPedrosaAndrade" target="_blank" rel="noopener" aria-label="GitHub"><svg><use href="#i-github"/></svg></a></li>
+        <li><a href="mailto:isabellipedrosaandrade@gmail.com" aria-label="Enviar e-mail"><svg><use href="#i-email"/></svg></a></li>
+      </ul>
     </div>
   </div>
 
   <main id="conteudo">
 
     <section class="abertura" id="inicio" aria-labelledby="nome-hero">
-
       <img class="guardanapo guardanapo-abertura" src="img/ornamentos/guardanapo.svg" alt="">
       <div class="abertura-texto">
         <p class="rotulo-mono">( PORTFÓLIO — TECNOLOGIA DA INFORMAÇÃO )</p>
         <h1 class="nome" id="nome-hero"><span class="nome-1">Isabelli</span> <span class="nome-2">Pedrosa Andrade</span></h1>
         <svg class="nome-ornamento" viewBox="0 0 320 40" aria-hidden="true"><use href="#faixa-sigilo"/></svg>
-        <p class="titulo-cargo" data-campo="perfil.titulo">Desenvolvedora Front-end · Técnica em Informática</p>
-        <p class="frase" data-campo="perfil.frase">Crio interfaces, jogos e sistemas conectados, unindo código e um olhar atento para o visual.</p>
-        <p class="selo-disponivel"><span class="selo-ponto" aria-hidden="true"></span><span data-campo="perfil.disponibilidade">Aberta a oportunidades de estágio e júnior</span></p>
+        <p class="titulo-cargo">Desenvolvedora Front-end · Técnica em Informática</p>
+        <p class="frase">Crio interfaces, jogos e sistemas conectados, unindo código e um olhar atento para o visual.</p>
+        <p class="selo-disponivel"><span class="selo-ponto" aria-hidden="true"></span>Aberta a oportunidades de estágio e júnior</p>
         <div class="acoes">
           <a class="botao botao-mostarda" href="#projetos">Ver projetos</a>
-          <a class="botao botao-contorno js-curriculo" href="docs/curriculo-isabelli-pedrosa-andrade.pdf" download>Baixar currículo</a> 
-
+          <a class="botao botao-contorno" href="docs/curriculo-isabelli-pedrosa-andrade.pdf" download>Baixar currículo</a>
           <ul class="acoes-redes">
-            <li><a class="js-linkedin" href="https://www.linkedin.com/in/isabelli-pedrosa-632254391" target="_blank" rel="noopener" aria-label="LinkedIn (abre em nova aba)"><svg><use href="#i-linkedin"/></svg></a></li>
-            <li><a class="js-github" href="https://github.com/IsabelliPedrosaAndrade" target="_blank" rel="noopener" aria-label="GitHub (abre em nova aba)"><svg><use href="#i-github"/></svg></a></li>
-            <li><a class="js-email" href="mailto:isabellipedrosaandrade@gmail.com" aria-label="Enviar e-mail"><svg><use href="#i-email"/></svg></a></li>
+            <li><a href="https://www.linkedin.com/in/isabelli-pedrosa-632254391" target="_blank" rel="noopener" aria-label="LinkedIn (abre em nova aba)"><svg><use href="#i-linkedin"/></svg></a></li>
+            <li><a href="https://github.com/IsabelliPedrosaAndrade" target="_blank" rel="noopener" aria-label="GitHub (abre em nova aba)"><svg><use href="#i-github"/></svg></a></li>
+            <li><a href="mailto:isabellipedrosaandrade@gmail.com" aria-label="Enviar e-mail"><svg><use href="#i-email"/></svg></a></li>
           </ul>
         </div>
       </div>
@@ -256,37 +252,52 @@
           <canvas id="buraco-negro"></canvas>
           <svg class="bn-estrela"><use href="#estrela"/></svg>
         </div>
-        <div class="janela-vitral desenhar" data-svg="img/ornamentos/vitral.svg"></div>
+        <img class="janela-vitral desenhar" src="img/ornamentos/vitral.svg" alt="">
       </div>
     </section>
 
-    <div class="divisor revelar" data-svg="img/ornamentos/divisor.svg" aria-hidden="true"></div>
+    <div class="divisor" aria-hidden="true"><img class="desenhar" src="img/ornamentos/divisor.svg" alt=""></div>
 
     <section class="parte sobre" id="sobre" aria-labelledby="titulo-sobre">
       <p class="rotulo-mono rotulo-parte">( 01 — SOBRE )</p>
       <div class="mesa">
         <img class="guardanapo" src="img/ornamentos/guardanapo.svg" alt="">
-        <article class="carta papel">
+        <article class="carta papel revelar">
           <svg class="laco-carta" aria-hidden="true"><use href="#laco"/></svg>
           <div class="fita" aria-hidden="true"></div>
-          <figure class="polaroid" id="polaroid">
+          <figure class="polaroid">
             <svg class="clipe" aria-hidden="true"><use href="#clipe"/></svg>
-            <div class="polaroid-foto"></div>
+            <div class="polaroid-foto">
+              <span class="monograma-foto"><svg aria-hidden="true"><use href="#estrela"/></svg></span>
+            </div>
             <figcaption>Isabelli · 2026</figcaption>
           </figure>
           <h2 class="titulo-manuscrito" id="titulo-sobre">Sobre mim</h2>
-          <div class="carta-texto" id="sobre-texto"></div>
+          <div class="carta-texto">
+            <p><span class="capitular" aria-hidden="true"><svg class="canto canto-se"><use href="#filigrana"/></svg><svg class="canto canto-sd"><use href="#filigrana"/></svg><svg class="canto canto-ie"><use href="#filigrana"/></svg><svg class="canto canto-id"><use href="#filigrana"/></svg><span class="capitular-letra">T</span></span><span class="sr">T</span>écnica em Informática formada pela UNASP – São Paulo, com experiência em desenvolvimento web, robótica e IoT, banco de dados e jogos digitais. No TCC GrowAI, um sistema semi-hidropônico inteligente para plantas medicinais, desenvolvi o Endosymbiosis Protocol, jogo de terror point-and-click integrado ao projeto, além de atuar na montagem do hardware. Gosto de aprender ferramentas novas, de trabalhar em equipe e de transformar ideias em projetos que funcionam de verdade. Busco minha primeira oportunidade na área de tecnologia.</p>
+          </div>
           <p class="assinatura" aria-hidden="true">Isabelli</p>
           <div class="carta-rodape">
             <h3 class="rotulo-versalete">Competências</h3>
-            <ul class="etiquetas" id="competencias"></ul>
-            <p class="idiomas"><span class="rotulo-versalete">Idiomas</span> <span id="idiomas"></span></p>
+            <ul class="etiquetas">
+              <li>Trabalho em equipe e adaptação rápida a novos grupos</li>
+              <li>Proatividade</li>
+              <li>Ambição e foco em resultados</li>
+              <li>Aprendizado rápido</li>
+              <li>Resolução de problemas</li>
+              <li>Criatividade</li>
+              <li>Comunicação e apresentação em público</li>
+              <li>Organização e prazos</li>
+              <li>Liderança de projetos</li>
+              <li>Pensamento crítico</li>
+            </ul>
+            <p class="idiomas"><span class="rotulo-versalete">Idiomas</span> <span>Português (nativo) · Inglês (avançado)</span></p>
           </div>
         </article>
       </div>
     </section>
 
-    <div class="divisor revelar" data-svg="img/ornamentos/divisor.svg" aria-hidden="true"></div>
+    <div class="divisor" aria-hidden="true"><img class="desenhar" src="img/ornamentos/divisor.svg" alt=""></div>
 
     <section class="parte projetos" id="projetos" aria-labelledby="titulo-projetos">
       <header class="cabeca">
@@ -294,55 +305,329 @@
         <h2 class="titulo-gotico" id="titulo-projetos">Projetos</h2>
         <p class="cabeca-sub">Clique em um projeto para ver a ficha completa.</p>
       </header>
-      <ul class="relicarios" id="relicarios"></ul>
-      <div class="carrossel-pontos" id="carrossel-pontos" aria-hidden="true"></div>
+
+      <ul class="relicarios">
+
+        <li class="relicario revelar">
+          <button class="relicario-botao" type="button" data-abrir="ficha-growai" aria-haspopup="dialog">
+            <span class="relicario-moldura">
+              <span class="relicario-imagem"><span class="relicario-letra" aria-hidden="true">G</span></span>
+              <img class="relicario-ornamento desenhar" src="img/ornamentos/arco-relicario.svg" alt="">
+            </span>
+            <span class="relicario-info">
+              <span class="relicario-meta"><span class="ano">(2026)</span><span class="selo-formato">Em equipe · TCC</span></span>
+              <span class="relicario-nome">GrowAI</span>
+              <span class="relicario-sub">Horta semi-hidropônica com IA</span>
+              <span class="relicario-resumo">Horta automatizada com inteligência artificial para o cultivo de plantas medicinais.</span>
+              <span class="tags"><span>ESP32</span><span>Sensores</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>+5</span></span>
+              <span class="relicario-ver">Ver ficha</span>
+            </span>
+          </button>
+
+          <dialog class="ficha" id="ficha-growai" aria-labelledby="ficha-growai-titulo" closedby="any">
+            <div class="ficha-papel papel">
+              <form method="dialog"><button class="ficha-fechar" aria-label="Fechar ficha"><svg><use href="#i-fechar"/></svg></button></form>
+              <p class="rotulo-mono">( FICHA DO PROJETO · 2026 )</p>
+              <h2 class="ficha-titulo" id="ficha-growai-titulo">GrowAI</h2>
+              <p class="ficha-sub">Horta semi-hidropônica com IA · TCC</p>
+              <p class="ficha-meta"><span>TCC do Técnico em Informática · UNASP – São Paulo</span><span>Em equipe</span><span>IoT/Robótica</span><span>Web</span></p>
+              <p class="ficha-cientifico"><span class="rotulo-versalete">Título científico</span><em>Sistema IoT semi-hidropônico inteligente para modulação de princípios ativos em plantas medicinais</em></p>
+              <div class="ficha-estudo">
+                <section class="estudo-bloco"><h3>O problema</h3><p>A concentração de princípios ativos em plantas medicinais muda conforme as condições de cultivo, como temperatura, umidade e irrigação, mas esse controle costuma ser manual e impreciso.</p></section>
+                <section class="estudo-bloco"><h3>A solução</h3><p>Um sistema semi-hidropônico inteligente que monitora o ambiente com sensores e câmera e automatiza a irrigação, com os dados acessíveis por um site e um app.</p></section>
+                <section class="estudo-bloco"><h3>Minha participação</h3><p>Montagem da estrutura hidráulica, integração dos componentes eletrônicos (ESP32, sensores, módulo relé e bomba), correções no site e desenvolvimento do jogo Endosymbiosis Protocol, integrado ao projeto.</p></section>
+                <section class="estudo-bloco"><h3>Tecnologias</h3><ul class="tags"><li>ESP32</li><li>ESP32-CAM</li><li>Sensor de temperatura</li><li>Sensor de umidade do solo</li><li>Módulo relé</li><li>Bomba d’água</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Python (IA)</li></ul></section>
+                <section class="estudo-bloco estudo-destaque"><h3>Desafios e decisões</h3><p>No dia da apresentação, a internet do local estava instável e as imagens da ESP32-CAM chegavam com muito atraso. O sistema funcionava, mas a latência atrapalhou a demonstração ao vivo. Isso mostrou na prática como a rede afeta um sistema de IoT.</p></section>
+                <section class="estudo-bloco"><h3>Resultado</h3><p>Apresentado na Tech Week 2026 e em formato de pôster no III Simpósio de Pré-Iniciação Científica (SIPIC) da UNASP-SP; nota máxima na avaliação final.</p></section>
+                <section class="estudo-bloco"><h3>O que eu faria diferente</h3><p>Preparar um modo de demonstração offline, com rede local própria ou imagens armazenadas, para não depender da internet do evento.</p></section>
+              </div>
+              <div class="ficha-acoes">
+                <a class="botao botao-tinta" href="https://growai-xi.vercel.app" target="_blank" rel="noopener"><svg><use href="#i-externo"/></svg>Ver site</a>
+                <a class="botao botao-tinta-contorno" href="https://github.com/Sophiabarros/growai-tcc" target="_blank" rel="noopener"><svg><use href="#i-codigo"/></svg>Código</a>
+              </div>
+            </div>
+          </dialog>
+        </li>
+
+        <li class="relicario revelar">
+          <button class="relicario-botao" type="button" data-abrir="ficha-endosymbiosis" aria-haspopup="dialog">
+            <span class="relicario-moldura">
+              <span class="relicario-imagem"><span class="relicario-letra" aria-hidden="true">E</span></span>
+              <img class="relicario-ornamento desenhar" src="img/ornamentos/arco-relicario.svg" alt="">
+            </span>
+            <span class="relicario-info">
+              <span class="relicario-meta"><span class="ano">(2026)</span><span class="selo-formato">Individual</span></span>
+              <span class="relicario-nome">Endosymbiosis Protocol</span>
+              <span class="relicario-sub">Jogo de terror point-and-click</span>
+              <span class="relicario-resumo">Jogo de terror no estilo point-and-click, jogável direto no navegador.</span>
+              <span class="tags"><span>GDevelop</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Vercel</span></span>
+              <span class="relicario-ver">Ver ficha</span>
+            </span>
+          </button>
+
+          <dialog class="ficha" id="ficha-endosymbiosis" aria-labelledby="ficha-endosymbiosis-titulo" closedby="any">
+            <div class="ficha-papel papel">
+              <form method="dialog"><button class="ficha-fechar" aria-label="Fechar ficha"><svg><use href="#i-fechar"/></svg></button></form>
+              <p class="rotulo-mono">( FICHA DO PROJETO · 2026 )</p>
+              <h2 class="ficha-titulo" id="ficha-endosymbiosis-titulo">Endosymbiosis Protocol</h2>
+              <p class="ficha-sub">Jogo de terror point-and-click</p>
+              <p class="ficha-meta"><span>Parte do TCC GrowAI</span><span>Individual</span><span>Jogos</span></p>
+              <div class="ficha-estudo">
+                <section class="estudo-bloco"><h3>A solução</h3><p>Jogo de terror point-and-click jogável direto no navegador, com site próprio publicado na Vercel.</p></section>
+                <section class="estudo-bloco"><h3>Minha participação</h3><p>Roteiro, lógica do jogo, ambientação e publicação do site.</p></section>
+                <section class="estudo-bloco"><h3>Tecnologias</h3><ul class="tags"><li>GDevelop (sistema de eventos)</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Vercel</li></ul></section>
+                <section class="estudo-bloco"><h3>Resultado</h3><p>Jogo publicado e acessível online.</p></section>
+              </div>
+              <div class="ficha-acoes">
+                <a class="botao botao-tinta" href="https://endosybiosisprotocol-tracklink-indol.vercel.app" target="_blank" rel="noopener"><svg><use href="#i-externo"/></svg>Jogar</a>
+                <a class="botao botao-tinta-contorno" href="https://github.com/IsabelliPedrosaAndrade/EndosybiosisProtocol-Tracklink" target="_blank" rel="noopener"><svg><use href="#i-codigo"/></svg>Código</a>
+              </div>
+            </div>
+          </dialog>
+        </li>
+
+        <li class="relicario revelar">
+          <button class="relicario-botao" type="button" data-abrir="ficha-geoimpacto" aria-haspopup="dialog">
+            <span class="relicario-moldura">
+              <span class="relicario-imagem"><span class="relicario-letra" aria-hidden="true">G</span></span>
+              <img class="relicario-ornamento desenhar" src="img/ornamentos/arco-relicario.svg" alt="">
+            </span>
+            <span class="relicario-info">
+              <span class="relicario-meta"><span class="ano">(2025)</span><span class="selo-formato">Em equipe · Edutec</span></span>
+              <span class="relicario-nome">GeoImpacto</span>
+              <span class="relicario-sub">Site educativo sobre desastres naturais</span>
+              <span class="relicario-resumo">Site educativo com quiz, login de usuários e pódio público.</span>
+              <span class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Node.js</span><span>PostgreSQL</span><span>+1</span></span>
+              <span class="relicario-ver">Ver ficha</span>
+            </span>
+          </button>
+
+          <dialog class="ficha" id="ficha-geoimpacto" aria-labelledby="ficha-geoimpacto-titulo" closedby="any">
+            <div class="ficha-papel papel">
+              <form method="dialog"><button class="ficha-fechar" aria-label="Fechar ficha"><svg><use href="#i-fechar"/></svg></button></form>
+              <p class="rotulo-mono">( FICHA DO PROJETO · 2025 )</p>
+              <h2 class="ficha-titulo" id="ficha-geoimpacto-titulo">GeoImpacto</h2>
+              <p class="ficha-sub">Site educativo sobre desastres naturais</p>
+              <p class="ficha-meta"><span>Projeto Edutec 2025</span><span>Em equipe · 6 integrantes</span><span>Web</span></p>
+              <div class="ficha-estudo">
+                <section class="estudo-bloco"><h3>O problema</h3><p>Tornar o aprendizado sobre desastres naturais mais interessante e interativo para estudantes.</p></section>
+                <section class="estudo-bloco"><h3>A solução</h3><p>Site educativo com conteúdo sobre furacões, terremotos, tsunamis, incêndios, enchentes e erupções, linha do tempo histórica e um quiz com cadastro, login, pontuação pessoal e pódio público.</p></section>
+                <section class="estudo-bloco"><h3>Tecnologias</h3><ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript puro (sem build)</li><li>Node.js + Express (API)</li><li>PostgreSQL (Neon)</li><li>Vercel</li></ul></section>
+                <section class="estudo-bloco estudo-destaque"><h3>Desafios e decisões</h3><p>O banco “dorme” quando fica sem uso, então a primeira requisição demora. A equipe tratou isso com estados de “Carregando…” e uma mensagem de “servidor indisponível” com botão de tentar de novo. No login, o site guarda apenas id e nome no navegador, nunca a senha.</p></section>
+                <section class="estudo-bloco"><h3>Resultado</h3><p>Projeto Edutec 2025, apresentado na Tech Week 2025.</p></section>
+              </div>
+              <div class="ficha-acoes">
+                <a class="botao botao-tinta" href="https://geoimpacto.vercel.app" target="_blank" rel="noopener"><svg><use href="#i-externo"/></svg>Ver site</a>
+                <a class="botao botao-tinta-contorno" href="https://github.com/Sophiabarros/geoimpacto" target="_blank" rel="noopener"><svg><use href="#i-codigo"/></svg>Código (front-end)</a>
+                <a class="botao botao-tinta-contorno" href="https://github.com/Sophiabarros/backend-edutec" target="_blank" rel="noopener"><svg><use href="#i-codigo"/></svg>Código (back-end)</a>
+              </div>
+            </div>
+          </dialog>
+        </li>
+
+      </ul>
 
       <div class="outros">
-        <h3 class="rotulo-versalete outros-titulo"><svg class="mini-estrela"><use href="#estrela"/></svg> Outros projetos</h3>
-        <div class="filtros" id="filtros" role="group" aria-label="Filtrar por categoria"></div>
-        <ul class="relicarios-menores" id="outros-projetos" aria-live="polite"></ul>
+        <h3 class="rotulo-versalete outros-titulo"><svg class="mini-estrela" aria-hidden="true"><use href="#estrela"/></svg> Outros projetos</h3>
+
+        <fieldset class="filtros">
+          <legend class="sr">Filtrar por categoria</legend>
+          <input class="sr" type="radio" name="filtro" id="filtro-todos" checked><label for="filtro-todos">Todos</label>
+          <input class="sr" type="radio" name="filtro" id="filtro-web"><label for="filtro-web">Web</label>
+          <input class="sr" type="radio" name="filtro" id="filtro-design"><label for="filtro-design">Design</label>
+          <input class="sr" type="radio" name="filtro" id="filtro-hardware"><label for="filtro-hardware">Hardware</label>
+        </fieldset>
+
+        <ul class="relicarios-menores">
+          <li class="relicario-menor" data-cat="design">
+            <button class="relicario-botao" type="button" data-abrir="ficha-revista" aria-haspopup="dialog">
+              <span class="relicario-moldura">
+                <span class="relicario-imagem"><span class="relicario-letra" aria-hidden="true">R</span></span>
+                <img class="relicario-ornamento desenhar" src="img/ornamentos/arco-relicario-menor.svg" alt="">
+              </span>
+              <span class="relicario-info">
+                <span class="relicario-meta"><span class="ano">(2024)</span><span class="categoria">Design</span></span>
+                <span class="relicario-nome">Revista digital</span>
+              </span>
+            </button>
+            <dialog class="ficha" id="ficha-revista" aria-labelledby="ficha-revista-titulo" closedby="any">
+              <div class="ficha-papel papel">
+                <form method="dialog"><button class="ficha-fechar" aria-label="Fechar ficha"><svg><use href="#i-fechar"/></svg></button></form>
+                <p class="rotulo-mono">( FICHA DO PROJETO · 2024 )</p>
+                <h2 class="ficha-titulo" id="ficha-revista-titulo">Revista digital</h2>
+                <p class="ficha-meta"><span>1º ano do Técnico em Informática</span><span>Em equipe</span><span>Design</span></p>
+                <div class="ficha-estudo">
+                  <section class="estudo-bloco"><h3>Descrição</h3><p>Revista digital <em>Nature Magazine</em>, produzida em equipe no 1º ano do curso.</p></section>
+                  <section class="estudo-bloco"><h3>Tecnologias</h3><ul class="tags"><li>Canva</li></ul></section>
+                </div>
+              </div>
+            </dialog>
+          </li>
+          <li class="relicario-menor" data-cat="web">
+            <button class="relicario-botao" type="button" data-abrir="ficha-primeiro-site" aria-haspopup="dialog">
+              <span class="relicario-moldura">
+                <span class="relicario-imagem"><span class="relicario-letra" aria-hidden="true">P</span></span>
+                <img class="relicario-ornamento desenhar" src="img/ornamentos/arco-relicario-menor.svg" alt="">
+              </span>
+              <span class="relicario-info">
+                <span class="relicario-meta"><span class="ano">(2024)</span><span class="categoria">Web</span></span>
+                <span class="relicario-nome">Primeiro site do projeto Tech/Edutec</span>
+              </span>
+            </button>
+            <dialog class="ficha" id="ficha-primeiro-site" aria-labelledby="ficha-primeiro-site-titulo" closedby="any">
+              <div class="ficha-papel papel">
+                <form method="dialog"><button class="ficha-fechar" aria-label="Fechar ficha"><svg><use href="#i-fechar"/></svg></button></form>
+                <p class="rotulo-mono">( FICHA DO PROJETO · 2024 )</p>
+                <h2 class="ficha-titulo" id="ficha-primeiro-site-titulo">Primeiro site do projeto Tech/Edutec</h2>
+                <p class="ficha-meta"><span>1º ano do Técnico em Informática</span><span>Em equipe</span><span>Web</span></p>
+                <div class="ficha-estudo">
+                  <section class="estudo-bloco"><h3>Descrição</h3><p>Primeiro site desenvolvido para o projeto Tech/Edutec.</p></section>
+                  <section class="estudo-bloco"><h3>Tecnologias</h3><ul class="tags"><li>HTML</li><li>CSS</li></ul></section>
+                </div>
+              </div>
+            </dialog>
+          </li>
+          <li class="relicario-menor" data-cat="hardware">
+            <button class="relicario-botao" type="button" data-abrir="ficha-montagem" aria-haspopup="dialog">
+              <span class="relicario-moldura">
+                <span class="relicario-imagem"><span class="relicario-letra" aria-hidden="true">M</span></span>
+                <img class="relicario-ornamento desenhar" src="img/ornamentos/arco-relicario-menor.svg" alt="">
+              </span>
+              <span class="relicario-info">
+                <span class="relicario-meta"><span class="categoria">Hardware</span></span>
+                <span class="relicario-nome">Montagem e manutenção de computadores</span>
+              </span>
+            </button>
+            <dialog class="ficha" id="ficha-montagem" aria-labelledby="ficha-montagem-titulo" closedby="any">
+              <div class="ficha-papel papel">
+                <form method="dialog"><button class="ficha-fechar" aria-label="Fechar ficha"><svg><use href="#i-fechar"/></svg></button></form>
+                <p class="rotulo-mono">( FICHA DO PROJETO )</p>
+                <h2 class="ficha-titulo" id="ficha-montagem-titulo">Montagem e manutenção de computadores</h2>
+                <p class="ficha-meta"><span>Prática do curso Técnico em Informática</span><span>Individual</span><span>Hardware</span></p>
+                <div class="ficha-estudo">
+                  <section class="estudo-bloco"><h3>Descrição</h3><p>Prática de montagem, diagnóstico e manutenção de computadores.</p></section>
+                </div>
+              </div>
+            </dialog>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <div class="divisor revelar" data-svg="img/ornamentos/divisor.svg" aria-hidden="true"></div>
+    <div class="divisor" aria-hidden="true"><img class="desenhar" src="img/ornamentos/divisor.svg" alt=""></div>
 
     <section class="parte formacao" id="formacao" aria-labelledby="titulo-formacao">
       <header class="cabeca">
         <p class="rotulo-mono">( 03 — FORMAÇÃO E HABILIDADES )</p>
         <h2 class="titulo-gotico" id="titulo-formacao">Formação &amp; Habilidades</h2>
       </header>
-      <div class="livro">
+      <div class="livro revelar">
         <div class="marcador" aria-hidden="true"></div>
         <div class="pagina pagina-esq papel">
           <svg class="canto canto-se" aria-hidden="true"><use href="#filigrana"/></svg>
           <h3 class="titulo-pagina">Formação <sup>(1)</sup></h3>
-          <div id="formacao-lista"></div>
+          <article class="formacao-item">
+            <h4>Ensino Médio com Habilitação Profissional de Técnico em Informática</h4>
+            <p class="inst">UNASP – São Paulo</p>
+            <p class="periodo">2024 – 2026</p>
+            <p class="obs">Conclusão em dezembro de 2026</p>
+          </article>
+          <article class="formacao-item">
+            <h4>Ensino Fundamental</h4>
+            <p class="inst">UNASP – São Paulo</p>
+            <p class="periodo">2022 – 2023</p>
+          </article>
+          <article class="formacao-item">
+            <h4>Ensino Fundamental</h4>
+            <p class="inst">Escola Estadual Prof. Maria Petronila Limeira dos Milagres Monteiro</p>
+            <p class="periodo">2020 – 2022</p>
+          </article>
           <h3 class="titulo-pagina titulo-pagina-2">Disciplinas técnicas <sup>(2)</sup></h3>
-          <dl class="disciplinas" id="disciplinas"></dl>
+          <dl class="pautado">
+            <dt>Programação</dt><dd>Lógica de Programação · Programação Orientada a Objetos</dd>
+            <dt>Desenvolvimento web</dt><dd>Introdução ao Desenvolvimento Web · Desenvolvimento de Websites · Desenvolvimento de Sistemas Web · Projeto Integrado de Sistemas</dd>
+            <dt>Dados</dt><dd>Banco de Dados · Data Science e Business Intelligence</dd>
+            <dt>Infraestrutura</dt><dd>Instalação e Manutenção de Hardware · Redes e Cloud Computing</dd>
+            <dt>Robótica</dt><dd>Introdução à Robótica · Robótica e IoT · Robótica Avançada</dd>
+            <dt>Design e inovação</dt><dd>Design e Mídia Digital · UX e UI · Design de Games · Inovação</dd>
+          </dl>
           <span class="numero-pagina" aria-hidden="true">— i —</span>
         </div>
         <div class="pagina pagina-dir papel">
           <svg class="canto canto-sd" aria-hidden="true"><use href="#filigrana"/></svg>
           <h3 class="titulo-pagina">Habilidades <sup>(3)</sup></h3>
-          <ul class="habilidades-principais" id="habilidades-principais"></ul>
-          <p class="habilidades-outras">Outras habilidades</p>
-          <dl class="pautado" id="habilidades"></dl>
+          <ul class="habilidades-principais">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Git/GitHub</li>
+          </ul>
+          <p class="habilidades-outras rotulo-versalete">Outras habilidades</p>
+          <dl class="pautado">
+            <dt>Linguagens</dt><dd>C · Java</dd>
+            <dt>Web</dt><dd>Node.js · Express · npm · Vercel</dd>
+            <dt>Banco de dados e dados</dt><dd>MySQL · Power BI · Excel</dd>
+            <dt>Robótica e IoT</dt><dd>Arduino (Arduino IDE) · ESP32 · Tinkercad · Wokwi · Sensores · Módulo relé · Automação com bombas e motores</dd>
+            <dt>Redes e cloud</dt><dd>Cisco Packet Tracer · Google Cloud</dd>
+            <dt>Design e jogos</dt><dd>Figma · Photoshop · Canva · GDevelop</dd>
+            <dt>Ferramentas</dt><dd>VS Code · IntelliJ IDEA · Code::Blocks · Trello · Notion</dd>
+            <dt>Hardware</dt><dd>Montagem e manutenção de computadores</dd>
+          </dl>
           <span class="numero-pagina" aria-hidden="true">— ii —</span>
         </div>
       </div>
     </section>
 
-    <div class="divisor revelar" data-svg="img/ornamentos/divisor.svg" aria-hidden="true"></div>
+    <div class="divisor" aria-hidden="true"><img class="desenhar" src="img/ornamentos/divisor.svg" alt=""></div>
 
     <section class="parte trajetoria" id="trajetoria" aria-labelledby="titulo-trajetoria">
       <header class="cabeca">
         <p class="rotulo-mono">( 04 — TRAJETÓRIA EM TI )</p>
         <h2 class="titulo-gotico" id="titulo-trajetoria">Trajetória em TI</h2>
       </header>
-      <ol class="corrente" id="linha-tempo"></ol>
+      <ol class="corrente">
+        <li class="marco revelar">
+          <span class="marco-estrela" aria-hidden="true"><svg><use href="#estrela"/></svg></span>
+          <div class="marco-cartao">
+            <h3 class="marco-ano">2026</h3>
+            <ul class="marco-itens">
+              <li><span class="marco-titulo">Conclusão do Técnico em Informática</span><span class="marco-linha"><span class="marco-data">Dez/2026</span><span class="etiqueta etiqueta-formacao">Formação</span></span></li>
+              <li><span class="marco-titulo">TCC GrowAI</span><span class="marco-linha"><span class="etiqueta etiqueta-projeto">Projeto</span></span></li>
+              <li><span class="marco-titulo">III SIPIC — apresentação de pôster</span><span class="marco-linha"><span class="etiqueta etiqueta-evento">Evento</span></span></li>
+              <li><span class="marco-titulo">Tech Week — apresentação do TCC</span><span class="marco-linha"><span class="etiqueta etiqueta-evento">Evento</span></span></li>
+              <li><span class="marco-titulo">Certificado Cisco — Networking Basics</span><span class="marco-linha"><span class="marco-data">Out/2026</span><span class="etiqueta etiqueta-formacao">Formação</span></span></li>
+              <li><span class="marco-titulo">Lançamento do jogo Endosymbiosis Protocol</span><span class="marco-linha"><span class="etiqueta etiqueta-projeto">Projeto</span></span></li>
+              <li><span class="marco-titulo">Medalha de Ouro no Mérito Acadêmico</span><span class="marco-linha"><span class="etiqueta etiqueta-premio">Prêmio</span></span></li>
+            </ul>
+          </div>
+        </li>
+        <li class="marco revelar">
+          <span class="marco-estrela" aria-hidden="true"><svg><use href="#estrela"/></svg></span>
+          <div class="marco-cartao">
+            <h3 class="marco-ano">2025</h3>
+            <ul class="marco-itens">
+              <li><span class="marco-titulo">Tech Week 2025 — apresentação do projeto GeoImpacto</span><span class="marco-linha"><span class="etiqueta etiqueta-evento">Evento</span></span></li>
+              <li><span class="marco-titulo">II SIPIC — ouvinte</span><span class="marco-linha"><span class="etiqueta etiqueta-evento">Evento</span></span></li>
+              <li><span class="marco-titulo">Medalha de Ouro no Mérito Acadêmico</span><span class="marco-linha"><span class="etiqueta etiqueta-premio">Prêmio</span></span></li>
+            </ul>
+          </div>
+        </li>
+        <li class="marco revelar">
+          <span class="marco-estrela" aria-hidden="true"><svg><use href="#estrela"/></svg></span>
+          <div class="marco-cartao">
+            <h3 class="marco-ano">2024</h3>
+            <ul class="marco-itens">
+              <li><span class="marco-titulo">Início do Técnico em Informática</span><span class="marco-linha"><span class="etiqueta etiqueta-formacao">Formação</span></span></li>
+              <li><span class="marco-titulo">Tech Week — ouvinte</span><span class="marco-linha"><span class="etiqueta etiqueta-evento">Evento</span></span></li>
+              <li><span class="marco-titulo">Medalha de Prata no Mérito Acadêmico</span><span class="marco-linha"><span class="etiqueta etiqueta-premio">Prêmio</span></span></li>
+            </ul>
+          </div>
+        </li>
+      </ol>
     </section>
 
-    <div class="divisor revelar" data-svg="img/ornamentos/divisor.svg" aria-hidden="true"></div>
+    <div class="divisor" aria-hidden="true"><img class="desenhar" src="img/ornamentos/divisor.svg" alt=""></div>
 
     <section class="parte conquistas" id="conquistas" aria-labelledby="titulo-conquistas">
       <header class="cabeca">
@@ -351,28 +636,69 @@
       </header>
 
       <h3 class="rotulo-versalete subtitulo-centro">Mérito Acadêmico</h3>
-      <ul class="camafeus" id="medalhas"></ul>
-      <ul class="premios" id="premios"></ul>
+      <ul class="camafeus">
+        <li class="camafeu ouro revelar">
+          <div class="camafeu-moldura">
+            <img class="camafeu-renda desenhar" src="img/ornamentos/camafeu.svg" alt="">
+            <div class="camafeu-oval"><svg class="medalha" aria-hidden="true"><use href="#medalha"/></svg><span class="brilho" aria-hidden="true"></span></div>
+          </div>
+          <p class="camafeu-tipo">Medalha de Ouro</p>
+          <p class="camafeu-titulo">Mérito Acadêmico UNASP</p>
+          <span class="ano">(2026)</span>
+        </li>
+        <li class="camafeu ouro revelar">
+          <div class="camafeu-moldura">
+            <img class="camafeu-renda desenhar" src="img/ornamentos/camafeu.svg" alt="">
+            <div class="camafeu-oval"><svg class="medalha" aria-hidden="true"><use href="#medalha"/></svg><span class="brilho" aria-hidden="true"></span></div>
+          </div>
+          <p class="camafeu-tipo">Medalha de Ouro</p>
+          <p class="camafeu-titulo">Mérito Acadêmico UNASP</p>
+          <span class="ano">(2025)</span>
+        </li>
+        <li class="camafeu prata revelar">
+          <div class="camafeu-moldura">
+            <img class="camafeu-renda desenhar" src="img/ornamentos/camafeu.svg" alt="">
+            <div class="camafeu-oval"><svg class="medalha" aria-hidden="true"><use href="#medalha"/></svg><span class="brilho" aria-hidden="true"></span></div>
+          </div>
+          <p class="camafeu-tipo">Medalha de Prata</p>
+          <p class="camafeu-titulo">Mérito Acadêmico UNASP</p>
+          <span class="ano">(2024)</span>
+        </li>
+        <li class="camafeu prata revelar">
+          <div class="camafeu-moldura">
+            <img class="camafeu-renda desenhar" src="img/ornamentos/camafeu.svg" alt="">
+            <div class="camafeu-oval"><svg class="medalha" aria-hidden="true"><use href="#medalha"/></svg><span class="brilho" aria-hidden="true"></span></div>
+          </div>
+          <p class="camafeu-tipo">Medalha de Prata</p>
+          <p class="camafeu-titulo">Mérito Acadêmico UNASP</p>
+          <span class="ano">(2023)</span>
+        </li>
+      </ul>
 
-      <div class="certificados-bloco" id="bloco-certificados">
-        <h3 class="rotulo-versalete subtitulo-centro">Certificados</h3>
-        <ul class="certificados" id="certificados"></ul>
-      </div>
+      <h3 class="rotulo-versalete subtitulo-centro">Certificados</h3>
+      <ul class="certificados">
+        <li class="certificado revelar">
+          <div class="certificado-vazio" aria-hidden="true">
+            <span class="cv-titulo">Certificado</span><span class="cv-linha"></span><span class="cv-linha curta"></span>
+            <span class="cv-nome">Cisco Networking Academy</span><svg class="cv-selo"><use href="#selo"/></svg>
+          </div>
+          <h4>Conceitos Básicos de Redes (Networking Basics)</h4>
+          <p class="inst">Cisco Networking Academy</p>
+          <p class="data">Concluído em 29/10/2026</p>
+          <p class="codigo">ID de verificação: <span>6ff558b0-21cb-4cb5-a697-fcde5a12bce0</span></p>
+        </li>
+      </ul>
 
-      <div class="bimestral" id="bloco-bimestral">
-        <h3 class="rotulo-versalete subtitulo-centro">Mérito Acadêmico bimestral</h3>
-        <div id="bimestral"></div>
-      </div>
     </section>
 
-    <div class="divisor revelar" data-svg="img/ornamentos/divisor.svg" aria-hidden="true"></div>
+    <div class="divisor" aria-hidden="true"><img class="desenhar" src="img/ornamentos/divisor.svg" alt=""></div>
 
     <section class="parte pesquisa" id="pesquisa" aria-labelledby="titulo-pesquisa">
       <header class="cabeca">
         <p class="rotulo-mono">( 06 — PESQUISA E EVENTOS )</p>
         <h2 class="titulo-gotico" id="titulo-pesquisa">Pesquisa &amp; Eventos</h2>
       </header>
-      <div class="placa-suporte">
+      <div class="placa-suporte revelar">
         <svg class="placa-correntes" viewBox="0 0 400 110" preserveAspectRatio="none" aria-hidden="true">
           <circle cx="200" cy="8" r="5" fill="none" stroke="#7C88EE"/>
           <path class="corrente-fio" d="M200 13 L52 104 M200 13 L348 104"/>
@@ -383,15 +709,26 @@
           <svg class="canto canto-ie" aria-hidden="true"><use href="#filigrana"/></svg>
           <svg class="canto canto-id" aria-hidden="true"><use href="#filigrana"/></svg>
           <p class="placa-aviso">✦ Aviso ✦</p>
-          <div id="pesquisa-lista"></div>
+          <article class="pesquisa-item">
+            <p class="selo-tipo"><span>Pôster</span><span>III SIPIC</span><span>UNASP-SP · 2026</span></p>
+            <h4 class="pesquisa-titulo">Sistema IoT semi-hidropônico inteligente para modulação de princípios ativos em plantas medicinais</h4>
+            <p class="referencia"><strong>ANDRADE, I. P.</strong>; FERNANDES, L. A.; LEITE, S. S.; OLIVEIRA, S. B.; GARCIA, M. M. C. Pôster apresentado no III SIPIC, UNASP-SP, 2026.</p>
+            <p class="status-pesquisa">Artigo em processo de publicação</p>
+          </article>
           <div class="placa-divisor" aria-hidden="true"></div>
           <h3 class="rotulo-versalete">Eventos</h3>
-          <ul class="eventos" id="eventos"></ul>
+          <ul class="eventos">
+            <li><span class="ano">2026</span><strong>III SIPIC</strong><span class="papel-evento">Apresentação de pôster</span></li>
+            <li><span class="ano">2026</span><strong>Tech Week</strong><span class="papel-evento">Apresentação do TCC</span></li>
+            <li><span class="ano">2025</span><strong>Tech Week</strong><span class="papel-evento">Apresentação do projeto GeoImpacto</span></li>
+            <li><span class="ano">2025</span><strong>II SIPIC</strong><span class="papel-evento">Ouvinte</span></li>
+            <li><span class="ano">2024</span><strong>Tech Week</strong><span class="papel-evento">Ouvinte</span></li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <div class="divisor revelar" data-svg="img/ornamentos/divisor.svg" aria-hidden="true"></div>
+    <div class="divisor" aria-hidden="true"><img class="desenhar" src="img/ornamentos/divisor.svg" alt=""></div>
 
     <section class="parte contato" id="contato" aria-labelledby="titulo-contato">
       <header class="cabeca">
@@ -399,77 +736,52 @@
         <h2 class="titulo-gotico" id="titulo-contato">Contato</h2>
         <p class="cabeca-sub">Uma carta para você. Abra o envelope.</p>
       </header>
-      <!-- no computador: partículas formando "Olá!" e a estrela (js/particulas.js);
-           no celular: só a palavra "Olá!" parada, feita de pontos com CSS -->
       <canvas class="figura-pontos" id="figura-pontos" aria-hidden="true"></canvas>
-      <p class="contato-palavra" id="contato-palavra" aria-hidden="true">Olá!</p>
+      <p class="contato-palavra" aria-hidden="true">Olá!</p>
       <div class="contato-mesa">
         <img class="guardanapo guardanapo-contato" src="img/ornamentos/guardanapo.svg" alt="">
         <div class="envelope" id="envelope">
-          <div class="envelope-cartao" id="cartao-contato">
+          <div class="envelope-cartao papel" id="cartao-contato" inert>
             <p class="rotulo-mono">( E-MAIL )</p>
             <div class="email-linha">
               <a class="email" id="email" href="mailto:isabellipedrosaandrade@gmail.com">isabellipedrosaandrade@gmail.com</a>
-              <button class="copiar" id="copiar-email" type="button" aria-label="Copiar e-mail">
-                <svg><use href="#i-copiar"/></svg>
-              </button>
+              <button class="copiar" id="copiar-email" type="button" aria-label="Copiar e-mail"><svg><use href="#i-copiar"/></svg></button>
             </div>
             <ul class="redes">
-              <li><a id="link-linkedin" href="https://www.linkedin.com/in/isabelli-pedrosa-632254391" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-linkedin"/></svg></a></li>
-              <li><a id="link-github" href="https://github.com/IsabelliPedrosaAndrade" target="_blank" rel="noopener" aria-label="GitHub"><svg><use href="#i-github"/></svg></a></li>
-              <li><a id="link-lattes" href="https://lattes.cnpq.br/4965272412145181" target="_blank" rel="noopener" aria-label="Currículo Lattes"><svg><use href="#i-lattes"/></svg></a></li>
+              <li><a href="https://www.linkedin.com/in/isabelli-pedrosa-632254391" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-linkedin"/></svg></a></li>
+              <li><a href="https://github.com/IsabelliPedrosaAndrade" target="_blank" rel="noopener" aria-label="GitHub"><svg><use href="#i-github"/></svg></a></li>
+              <li><a href="https://lattes.cnpq.br/4965272412145181" target="_blank" rel="noopener" aria-label="Currículo Lattes"><svg><use href="#i-lattes"/></svg></a></li>
             </ul>
           </div>
-          <div class="envelope-corpo" aria-hidden="true"></div>
+          <div class="envelope-corpo papel" aria-hidden="true"></div>
           <div class="envelope-aba" aria-hidden="true"></div>
           <button class="envelope-selo" id="abrir-envelope" type="button" aria-expanded="false" aria-controls="cartao-contato">
             <svg aria-hidden="true"><use href="#selo"/></svg>
             <span class="envelope-dica">Abrir</span>
           </button>
         </div>
-        <p class="status" id="status-copia" role="status" aria-live="polite"></p>
+        <p class="status" id="status-copia" role="status"></p>
       </div>
     </section>
   </main>
 
-
   <footer class="rodape">
-    <div class="divisor divisor-rodape revelar" data-svg="img/ornamentos/divisor.svg" aria-hidden="true"></div>
-    <p class="rodape-nome"><span data-campo="perfil.nome">Isabelli Pedrosa Andrade</span> · 2026</p>
+    <div class="divisor" aria-hidden="true"><img class="desenhar" src="img/ornamentos/divisor.svg" alt=""></div>
+    <p class="rodape-nome">Isabelli Pedrosa Andrade · 2026</p>
     <div class="renda-rodape" aria-hidden="true"></div>
   </footer>
 
-  <dialog class="ficha" id="ficha" aria-labelledby="ficha-titulo">
-    <div class="ficha-papel papel" id="ficha-conteudo"></div>
-  </dialog>
-
-  <dialog class="lightbox" id="lightbox" aria-label="Imagem ampliada">
+  <dialog class="lightbox" id="lightbox" aria-label="Imagem ampliada" closedby="any">
     <figure>
       <img id="lightbox-img" alt="">
       <figcaption id="lightbox-legenda"></figcaption>
     </figure>
     <button class="lightbox-nav lightbox-ant" type="button" aria-label="Imagem anterior"><svg><use href="#i-esq"/></svg></button>
     <button class="lightbox-nav lightbox-prox" type="button" aria-label="Próxima imagem"><svg><use href="#i-dir"/></svg></button>
-    <button class="lightbox-fechar" type="button" aria-label="Fechar imagem"><svg><use href="#i-fechar"/></svg></button>
+    <form method="dialog"><button class="lightbox-fechar" aria-label="Fechar imagem"><svg><use href="#i-fechar"/></svg></button></form>
   </dialog>
 
-  <script src="data.js"></script>
-  <script src="js/utilidades.js"></script>
-  <script src="js/arquivos.js"></script>
-  <script src="js/ornamentos.js"></script>
-  <script src="js/estrelas.js"></script>
-  <script src="js/perfil.js"></script>
-  <script src="js/galeria.js"></script>
-  <script src="js/particulas.js"></script>
-  <script src="js/revista.js"></script>
-  <script src="js/ficha.js"></script>
-  <script src="js/projetos.js"></script>
-  <script src="js/formacao.js"></script>
-  <script src="js/linha-do-tempo.js"></script>
-  <script src="js/conquistas.js"></script>
-  <script src="js/pesquisa.js"></script>
-  <script src="js/contato.js"></script>
-  <script src="js/menu.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/particulas.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

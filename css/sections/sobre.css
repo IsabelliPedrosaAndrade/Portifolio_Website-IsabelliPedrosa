@@ -74,6 +74,7 @@
   display: grid; place-items: center;
   color: var(--papel);
 }
+.polaroid-foto:has(img) .monograma-foto { display: none; }
 .monograma-foto svg { width: 42%; height: 42%; filter: drop-shadow(0 2px 0 var(--tinta)) drop-shadow(0 0 12px rgba(233, 235, 240, .6)); }
 .polaroid figcaption {
   margin-top: 6px;

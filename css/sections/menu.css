@@ -33,7 +33,6 @@
   letter-spacing: .12em;
   text-transform: uppercase;
 }
-.marca-imagem { width: 40px; height: 40px; border-radius: 50%; }
 .marca-estrela { width: 18px; height: 18px; color: var(--mostarda); filter: drop-shadow(0 0 6px rgba(212, 162, 58, .6)); }
 .marca-sufixo { color: var(--apagado); }
 

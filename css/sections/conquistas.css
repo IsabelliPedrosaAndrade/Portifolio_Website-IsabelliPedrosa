@@ -26,8 +26,6 @@
   background: radial-gradient(ellipse at 50% 35%, #1D2350, #0B0D14 75%);
   box-shadow: inset 0 0 0 2px var(--violeta-fundo), inset 0 0 24px rgba(0, 0, 0, .7);
 }
-.camafeu-oval img { width: 100%; height: 100%; object-fit: cover; }
-.camafeu-oval .ampliar { display: contents; cursor: zoom-in; }
 .medalha {
   width: 62%; height: 62%;
   color: var(--metal);
@@ -46,9 +44,6 @@
 
 .camafeu-tipo { font: 600 .74rem/1.4 var(--f-versalete); letter-spacing: .16em; text-transform: uppercase; color: var(--metal); }
 .camafeu-titulo { color: var(--osso); font-style: italic; }
-
-.premios { display: grid; justify-items: center; gap: 8px; margin: -32px 0 64px; }
-.premios li::before { content: "✦ "; color: var(--mostarda); }
 
 .certificados {
   display: grid;
@@ -82,6 +77,7 @@
 }
 .certificado-imagem:hover .certificado-zoom, .certificado-imagem:focus-visible .certificado-zoom { opacity: 1; }
 
+.certificado-imagem + .certificado-vazio { display: none; }
 .certificado-vazio {
   position: relative;
   display: flex; flex-direction: column; align-items: center; gap: 10px;
@@ -97,18 +93,3 @@
 .cv-linha.curta { width: 45%; }
 .cv-nome { font: 600 .7rem var(--f-versalete); letter-spacing: .12em; text-transform: uppercase; }
 .cv-selo { position: absolute; right: 16px; bottom: 14px; width: 52px; height: 52px; transform: rotate(-12deg); }
-
-.bimestral { max-width: 1000px; margin: 0 auto; }
-.bimestral-ano { border-top: 1px solid var(--linha); }
-.bimestral-ano summary {
-  display: flex; align-items: baseline; gap: 14px;
-  padding: 16px 4px;
-  font: 400 1.6rem var(--f-gotica-clara);
-  cursor: pointer;
-  list-style: none;
-}
-.bimestral-ano summary::before { content: "✦"; font-size: .8rem; color: var(--violeta); transition: transform .3s; }
-.bimestral-ano[open] summary::before { transform: rotate(45deg); }
-.bimestral-galeria { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 16px; padding-bottom: 24px; }
-.bimestral-galeria img { aspect-ratio: 3 / 4; object-fit: cover; border: 1px solid var(--linha); }
-.bimestral-galeria p { margin-top: 6px; font: 500 .72rem var(--f-mono); color: var(--apagado); text-align: center; }

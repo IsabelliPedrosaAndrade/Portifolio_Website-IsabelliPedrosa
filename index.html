@@ -34,9 +34,10 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="fonts/LavishlyYours-Regular.woff2" as="font" type="font/woff2" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=New+Rocker&family=IBM+Plex+Mono:wght@400;500&family=Pinyon+Script&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=New+Rocker&family=IBM+Plex+Mono:wght@400;500&family=Pinyon+Script&display=swap" rel="stylesheet"></noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=New+Rocker&family=IBM+Plex+Mono:wght@400;500&family=Pinyon+Script&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=New+Rocker&family=IBM+Plex+Mono:wght@400;500&family=Pinyon+Script&display=swap" rel="stylesheet"></noscript>
 
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/componentes.css">
@@ -87,14 +88,6 @@
           <feFuncR type="table" tableValues="0.165 0.914"/>
           <feFuncG type="table" tableValues="0.196 0.922"/>
           <feFuncB type="table" tableValues="0.522 0.941"/>
-        </feComponentTransfer>
-      </filter>
-      <filter id="duotone-violeta" color-interpolation-filters="sRGB">
-        <feColorMatrix type="matrix" values="0.299 0.587 0.114 0 0  0.299 0.587 0.114 0 0  0.299 0.587 0.114 0 0  0 0 0 1 0"/>
-        <feComponentTransfer>
-          <feFuncR type="table" tableValues="0.043 0.302 0.486"/>
-          <feFuncG type="table" tableValues="0.051 0.357 0.533"/>
-          <feFuncB type="table" tableValues="0.078 0.847 0.933"/>
         </feComponentTransfer>
       </filter>
     </defs>
@@ -169,9 +162,7 @@
     <symbol id="i-esq" viewBox="0 0 24 24"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-dir" viewBox="0 0 24 24"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-externo" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></g></symbol>
-    <symbol id="i-codigo" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M13.5 4l-3 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-    <symbol id="i-documento" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 17v3h16v-3"/></g></symbol>
-  </svg>
+    <symbol id="i-codigo" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M13.5 4l-3 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>  </svg>
 
   <canvas class="ceu" id="ceu" aria-hidden="true"></canvas>
   <div class="moldura-lateral moldura-esq" aria-hidden="true"></div>
@@ -261,7 +252,7 @@
     <section class="parte sobre" id="sobre" aria-labelledby="titulo-sobre">
       <p class="rotulo-mono rotulo-parte">( 01 — SOBRE )</p>
       <div class="mesa">
-        <img class="guardanapo" src="img/ornamentos/guardanapo.svg" alt="">
+        <img class="guardanapo" src="img/ornamentos/guardanapo.svg" alt="" loading="lazy" decoding="async">
         <article class="carta papel revelar">
           <svg class="laco-carta" aria-hidden="true"><use href="#laco"/></svg>
           <div class="fita" aria-hidden="true"></div>
@@ -269,6 +260,7 @@
             <svg class="clipe" aria-hidden="true"><use href="#clipe"/></svg>
             <div class="polaroid-foto">
               <span class="monograma-foto"><svg aria-hidden="true"><use href="#estrela"/></svg></span>
+              <img src="img/perfil/foto.webp" alt="Foto de Isabelli Pedrosa Andrade" loading="lazy" decoding="async" data-opcional>
             </div>
             <figcaption>Isabelli · 2026</figcaption>
           </figure>
@@ -311,14 +303,14 @@
         <li class="relicario revelar">
           <button class="relicario-botao" type="button" data-abrir="ficha-growai" aria-haspopup="dialog">
             <span class="relicario-moldura">
-              <span class="relicario-imagem"><span class="relicario-letra" aria-hidden="true">G</span></span>
-              <img class="relicario-ornamento desenhar" src="img/ornamentos/arco-relicario.svg" alt="">
+              <span class="relicario-imagem"><span class="relicario-letra" aria-hidden="true">G</span><img src="img/projetos/growai/1.webp" alt="" loading="lazy" decoding="async" data-opcional></span>
+              <img class="relicario-ornamento" src="img/ornamentos/arco-relicario.svg" alt="" loading="lazy" decoding="async">
             </span>
             <span class="relicario-info">
               <span class="relicario-meta"><span class="ano">(2026)</span><span class="selo-formato">Em equipe · TCC</span></span>
               <span class="relicario-nome">GrowAI</span>
               <span class="relicario-sub">Horta semi-hidropônica com IA</span>
-              <span class="relicario-resumo">Horta automatizada com inteligência artificial para o cultivo de plantas medicinais.</span>
+              <span class="relicario-resumo">Horta inteligente que monitora o cultivo em tempo real e irriga sozinha, com site e app próprios.</span>
               <span class="tags"><span>ESP32</span><span>Sensores</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>+5</span></span>
               <span class="relicario-ver">Ver ficha</span>
             </span>
@@ -329,17 +321,26 @@
               <form method="dialog"><button class="ficha-fechar" aria-label="Fechar ficha"><svg><use href="#i-fechar"/></svg></button></form>
               <p class="rotulo-mono">( FICHA DO PROJETO · 2026 )</p>
               <h2 class="ficha-titulo" id="ficha-growai-titulo">GrowAI</h2>
-              <p class="ficha-sub">Horta semi-hidropônica com IA · TCC</p>
+              <p class="ficha-sub">Horta semi-hidropônica inteligente com IA · TCC</p>
               <p class="ficha-meta"><span>TCC do Técnico em Informática · UNASP – São Paulo</span><span>Em equipe</span><span>IoT/Robótica</span><span>Web</span></p>
               <p class="ficha-cientifico"><span class="rotulo-versalete">Título científico</span><em>Sistema IoT semi-hidropônico inteligente para modulação de princípios ativos em plantas medicinais</em></p>
+              <div class="expositor">
+                <div class="monitor">
+                  <ul class="tela">
+                    <li data-opcional><a class="ampliar" href="img/projetos/growai/3.webp"><img src="img/projetos/growai/3.webp" alt="GrowAI no computador" loading="lazy" decoding="async"></a></li>
+                    <li data-opcional><a class="ampliar" href="img/projetos/growai/4.webp"><img src="img/projetos/growai/4.webp" alt="GrowAI no computador" loading="lazy" decoding="async"></a></li>
+                    <li data-opcional><a class="ampliar" href="img/projetos/growai/5.webp"><img src="img/projetos/growai/5.webp" alt="GrowAI no computador" loading="lazy" decoding="async"></a></li>
+                    <li data-opcional><video src="img/projetos/growai/video.mp4" aria-label="Vídeo: GrowAI" muted loop playsinline controls preload="none"></video></li>
+                  </ul>
+                </div>
+                <a class="celular ampliar" href="img/projetos/growai/2.webp" data-opcional><img src="img/projetos/growai/2.webp" alt="GrowAI no celular" loading="lazy" decoding="async"></a>
+              </div>
               <div class="ficha-estudo">
-                <section class="estudo-bloco"><h3>O problema</h3><p>A concentração de princípios ativos em plantas medicinais muda conforme as condições de cultivo, como temperatura, umidade e irrigação, mas esse controle costuma ser manual e impreciso.</p></section>
-                <section class="estudo-bloco"><h3>A solução</h3><p>Um sistema semi-hidropônico inteligente que monitora o ambiente com sensores e câmera e automatiza a irrigação, com os dados acessíveis por um site e um app.</p></section>
-                <section class="estudo-bloco"><h3>Minha participação</h3><p>Montagem da estrutura hidráulica, integração dos componentes eletrônicos (ESP32, sensores, módulo relé e bomba), correções no site e desenvolvimento do jogo Endosymbiosis Protocol, integrado ao projeto.</p></section>
+                <section class="estudo-bloco"><h3>O problema</h3><p>A concentração de princípios ativos em plantas medicinais depende diretamente das condições de cultivo, como temperatura, umidade e irrigação. Acompanhar tudo isso à mão é trabalhoso e pouco preciso.</p></section>
+                <section class="estudo-bloco"><h3>A solução</h3><p>Um sistema IoT completo que acompanha o cultivo em tempo real, com sensores de temperatura e umidade do solo e imagens da planta pela ESP32-CAM, e aciona a irrigação automaticamente. Os dados chegam a um site e a um app com painel, câmera, estações de cultivo e relatórios.</p></section>
+                <section class="estudo-bloco"><h3>Minha participação</h3><p>Fui responsável pela parte física do sistema: montei a estrutura hidráulica e integrei toda a eletrônica (ESP32, sensores, módulo relé e bomba d’água). Também contribuí no site e criei o Endosymbiosis Protocol, jogo que leva o tema do projeto para uma experiência interativa.</p></section>
                 <section class="estudo-bloco"><h3>Tecnologias</h3><ul class="tags"><li>ESP32</li><li>ESP32-CAM</li><li>Sensor de temperatura</li><li>Sensor de umidade do solo</li><li>Módulo relé</li><li>Bomba d’água</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Python (IA)</li></ul></section>
-                <section class="estudo-bloco estudo-destaque"><h3>Desafios e decisões</h3><p>No dia da apresentação, a internet do local estava instável e as imagens da ESP32-CAM chegavam com muito atraso. O sistema funcionava, mas a latência atrapalhou a demonstração ao vivo. Isso mostrou na prática como a rede afeta um sistema de IoT.</p></section>
-                <section class="estudo-bloco"><h3>Resultado</h3><p>Apresentado na Tech Week 2026 e em formato de pôster no III Simpósio de Pré-Iniciação Científica (SIPIC) da UNASP-SP; nota máxima na avaliação final.</p></section>
-                <section class="estudo-bloco"><h3>O que eu faria diferente</h3><p>Preparar um modo de demonstração offline, com rede local própria ou imagens armazenadas, para não depender da internet do evento.</p></section>
+                <section class="estudo-bloco"><h3>Resultado</h3><p>Nota máxima na avaliação final. Apresentado na Tech Week 2026 e, em formato de pôster, no III Simpósio de Pré-Iniciação Científica (SIPIC) da UNASP-SP. O artigo está em processo de publicação.</p></section>
               </div>
               <div class="ficha-acoes">
                 <a class="botao botao-tinta" href="https://growai-xi.vercel.app" target="_blank" rel="noopener"><svg><use href="#i-externo"/></svg>Ver site</a>
@@ -352,14 +353,14 @@
         <li class="relicario revelar">
           <button class="relicario-botao" type="button" data-abrir="ficha-endosymbiosis" aria-haspopup="dialog">
             <span class="relicario-moldura">
-              <span class="relicario-imagem"><span class="relicario-letra" aria-hidden="true">E</span></span>
-              <img class="relicario-ornamento desenhar" src="img/ornamentos/arco-relicario.svg" alt="">
+              <span class="relicario-imagem"><span class="relicario-letra" aria-hidden="true">E</span><img src="img/projetos/endosymbiosis/1.webp" alt="" loading="lazy" decoding="async" data-opcional></span>
+              <img class="relicario-ornamento" src="img/ornamentos/arco-relicario.svg" alt="" loading="lazy" decoding="async">
             </span>
             <span class="relicario-info">
               <span class="relicario-meta"><span class="ano">(2026)</span><span class="selo-formato">Individual</span></span>
               <span class="relicario-nome">Endosymbiosis Protocol</span>
               <span class="relicario-sub">Jogo de terror point-and-click</span>
-              <span class="relicario-resumo">Jogo de terror no estilo point-and-click, jogável direto no navegador.</span>
+              <span class="relicario-resumo">Jogo de terror point-and-click criado do zero, do roteiro à publicação, jogável direto no navegador.</span>
               <span class="tags"><span>GDevelop</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Vercel</span></span>
               <span class="relicario-ver">Ver ficha</span>
             </span>
@@ -370,16 +371,28 @@
               <form method="dialog"><button class="ficha-fechar" aria-label="Fechar ficha"><svg><use href="#i-fechar"/></svg></button></form>
               <p class="rotulo-mono">( FICHA DO PROJETO · 2026 )</p>
               <h2 class="ficha-titulo" id="ficha-endosymbiosis-titulo">Endosymbiosis Protocol</h2>
-              <p class="ficha-sub">Jogo de terror point-and-click</p>
+              <p class="ficha-sub">Jogo de terror point-and-click para navegador</p>
               <p class="ficha-meta"><span>Parte do TCC GrowAI</span><span>Individual</span><span>Jogos</span></p>
+              <div class="expositor">
+                <div class="monitor">
+                  <ul class="tela">
+                    <li data-opcional><a class="ampliar" href="img/projetos/endosymbiosis/3.webp"><img src="img/projetos/endosymbiosis/3.webp" alt="Endosymbiosis Protocol no computador" loading="lazy" decoding="async"></a></li>
+                    <li data-opcional><a class="ampliar" href="img/projetos/endosymbiosis/4.webp"><img src="img/projetos/endosymbiosis/4.webp" alt="Endosymbiosis Protocol no computador" loading="lazy" decoding="async"></a></li>
+                    <li data-opcional><a class="ampliar" href="img/projetos/endosymbiosis/5.webp"><img src="img/projetos/endosymbiosis/5.webp" alt="Endosymbiosis Protocol no computador" loading="lazy" decoding="async"></a></li>
+                    <li data-opcional><video src="img/projetos/endosymbiosis/video.mp4" aria-label="Vídeo: Endosymbiosis Protocol" muted loop playsinline controls preload="none"></video></li>
+                  </ul>
+                </div>
+                <a class="celular ampliar" href="img/projetos/endosymbiosis/2.webp" data-opcional><img src="img/projetos/endosymbiosis/2.webp" alt="Endosymbiosis Protocol no celular" loading="lazy" decoding="async"></a>
+              </div>
               <div class="ficha-estudo">
-                <section class="estudo-bloco"><h3>A solução</h3><p>Jogo de terror point-and-click jogável direto no navegador, com site próprio publicado na Vercel.</p></section>
-                <section class="estudo-bloco"><h3>Minha participação</h3><p>Roteiro, lógica do jogo, ambientação e publicação do site.</p></section>
+                <section class="estudo-bloco"><h3>O projeto</h3><p>Um jogo de terror point-and-click criado para o TCC GrowAI. O jogador avança pela história explorando cenas e interagindo com cliques, direto no navegador, sem precisar instalar nada.</p></section>
+                <section class="estudo-bloco"><h3>Minha participação</h3><p>Projeto individual, feito de ponta a ponta: escrevi o roteiro, construí toda a lógica do jogo no sistema de eventos do GDevelop, criei a ambientação de terror e desenvolvi e publiquei o site do jogo.</p></section>
+                <section class="estudo-bloco"><h3>Destaques</h3><ul class="destaques"><li>Roda em qualquer navegador, sem instalação</li><li>Site próprio publicado na Vercel</li><li>Leva o tema do GrowAI para uma experiência interativa</li></ul></section>
                 <section class="estudo-bloco"><h3>Tecnologias</h3><ul class="tags"><li>GDevelop (sistema de eventos)</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Vercel</li></ul></section>
-                <section class="estudo-bloco"><h3>Resultado</h3><p>Jogo publicado e acessível online.</p></section>
+                <section class="estudo-bloco"><h3>Resultado</h3><p>Jogo publicado e disponível online, integrado ao projeto GrowAI.</p></section>
               </div>
               <div class="ficha-acoes">
-                <a class="botao botao-tinta" href="https://endosybiosisprotocol-tracklink-indol.vercel.app" target="_blank" rel="noopener"><svg><use href="#i-externo"/></svg>Jogar</a>
+                <a class="botao botao-tinta" href="https://endosybiosisprotocol-tracklink.vercel.app" target="_blank" rel="noopener"><svg><use href="#i-externo"/></svg>Jogar</a>
                 <a class="botao botao-tinta-contorno" href="https://github.com/IsabelliPedrosaAndrade/EndosybiosisProtocol-Tracklink" target="_blank" rel="noopener"><svg><use href="#i-codigo"/></svg>Código</a>
               </div>
             </div>
@@ -389,14 +402,14 @@
         <li class="relicario revelar">
           <button class="relicario-botao" type="button" data-abrir="ficha-geoimpacto" aria-haspopup="dialog">
             <span class="relicario-moldura">
-              <span class="relicario-imagem"><span class="relicario-letra" aria-hidden="true">G</span></span>
-              <img class="relicario-ornamento desenhar" src="img/ornamentos/arco-relicario.svg" alt="">
+              <span class="relicario-imagem"><span class="relicario-letra" aria-hidden="true">G</span><img src="img/projetos/geoimpacto/1.webp" alt="" loading="lazy" decoding="async" data-opcional></span>
+              <img class="relicario-ornamento" src="img/ornamentos/arco-relicario.svg" alt="" loading="lazy" decoding="async">
             </span>
             <span class="relicario-info">
               <span class="relicario-meta"><span class="ano">(2025)</span><span class="selo-formato">Em equipe · Edutec</span></span>
               <span class="relicario-nome">GeoImpacto</span>
               <span class="relicario-sub">Site educativo sobre desastres naturais</span>
-              <span class="relicario-resumo">Site educativo com quiz, login de usuários e pódio público.</span>
+              <span class="relicario-resumo">Site educativo com quiz competitivo, contas de usuário e pódio público com os melhores jogadores.</span>
               <span class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Node.js</span><span>PostgreSQL</span><span>+1</span></span>
               <span class="relicario-ver">Ver ficha</span>
             </span>
@@ -409,12 +422,23 @@
               <h2 class="ficha-titulo" id="ficha-geoimpacto-titulo">GeoImpacto</h2>
               <p class="ficha-sub">Site educativo sobre desastres naturais</p>
               <p class="ficha-meta"><span>Projeto Edutec 2025</span><span>Em equipe · 6 integrantes</span><span>Web</span></p>
+              <div class="expositor">
+                <div class="monitor">
+                  <ul class="tela">
+                    <li data-opcional><a class="ampliar" href="img/projetos/geoimpacto/3.webp"><img src="img/projetos/geoimpacto/3.webp" alt="GeoImpacto no computador" loading="lazy" decoding="async"></a></li>
+                    <li data-opcional><a class="ampliar" href="img/projetos/geoimpacto/4.webp"><img src="img/projetos/geoimpacto/4.webp" alt="GeoImpacto no computador" loading="lazy" decoding="async"></a></li>
+                    <li data-opcional><a class="ampliar" href="img/projetos/geoimpacto/5.webp"><img src="img/projetos/geoimpacto/5.webp" alt="GeoImpacto no computador" loading="lazy" decoding="async"></a></li>
+                    <li data-opcional><video src="img/projetos/geoimpacto/video.mp4" aria-label="Vídeo: GeoImpacto" muted loop playsinline controls preload="none"></video></li>
+                  </ul>
+                </div>
+                <a class="celular ampliar" href="img/projetos/geoimpacto/2.webp" data-opcional><img src="img/projetos/geoimpacto/2.webp" alt="GeoImpacto no celular" loading="lazy" decoding="async"></a>
+              </div>
               <div class="ficha-estudo">
-                <section class="estudo-bloco"><h3>O problema</h3><p>Tornar o aprendizado sobre desastres naturais mais interessante e interativo para estudantes.</p></section>
-                <section class="estudo-bloco"><h3>A solução</h3><p>Site educativo com conteúdo sobre furacões, terremotos, tsunamis, incêndios, enchentes e erupções, linha do tempo histórica e um quiz com cadastro, login, pontuação pessoal e pódio público.</p></section>
-                <section class="estudo-bloco"><h3>Tecnologias</h3><ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript puro (sem build)</li><li>Node.js + Express (API)</li><li>PostgreSQL (Neon)</li><li>Vercel</li></ul></section>
-                <section class="estudo-bloco estudo-destaque"><h3>Desafios e decisões</h3><p>O banco “dorme” quando fica sem uso, então a primeira requisição demora. A equipe tratou isso com estados de “Carregando…” e uma mensagem de “servidor indisponível” com botão de tentar de novo. No login, o site guarda apenas id e nome no navegador, nunca a senha.</p></section>
-                <section class="estudo-bloco"><h3>Resultado</h3><p>Projeto Edutec 2025, apresentado na Tech Week 2025.</p></section>
+                <section class="estudo-bloco"><h3>O problema</h3><p>Tornar o estudo de desastres naturais mais envolvente para estudantes, trocando a leitura passiva por uma experiência interativa e competitiva.</p></section>
+                <section class="estudo-bloco"><h3>A solução</h3><p>Um site completo com páginas sobre furacões, terremotos, tsunamis, incêndios, enchentes e erupções vulcânicas, uma linha do tempo histórica e o quiz <em>Natural Disaster Survivor</em>. Cada jogador cria a própria conta, acompanha o histórico de pontuações e disputa o pódio público com os 3 melhores, exibido logo na página inicial.</p></section>
+                <section class="estudo-bloco"><h3>Destaques</h3><ul class="destaques"><li>Front-end em JavaScript puro, sem dependências nem etapa de build</li><li>Design system próprio e componentes reutilizáveis</li><li>API própria em Node.js + Express conectada a um banco PostgreSQL</li><li>Telas de carregamento e de erro com opção de tentar de novo</li><li>Login seguro: o navegador guarda só o id e o nome, nunca a senha</li></ul></section>
+                <section class="estudo-bloco"><h3>Tecnologias</h3><ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Node.js + Express (API)</li><li>PostgreSQL (Neon)</li><li>Vercel</li></ul></section>
+                <section class="estudo-bloco"><h3>Resultado</h3><p>Desenvolvido para o Edutec 2025 e apresentado na Tech Week 2025. Site e API publicados e funcionando online.</p></section>
               </div>
               <div class="ficha-acoes">
                 <a class="botao botao-tinta" href="https://geoimpacto.vercel.app" target="_blank" rel="noopener"><svg><use href="#i-externo"/></svg>Ver site</a>
@@ -442,8 +466,8 @@
           <li class="relicario-menor" data-cat="design">
             <button class="relicario-botao" type="button" data-abrir="ficha-revista" aria-haspopup="dialog">
               <span class="relicario-moldura">
-                <span class="relicario-imagem"><span class="relicario-letra" aria-hidden="true">R</span></span>
-                <img class="relicario-ornamento desenhar" src="img/ornamentos/arco-relicario-menor.svg" alt="">
+                <span class="relicario-imagem"><span class="relicario-letra" aria-hidden="true">R</span><img src="img/projetos/revista/1.webp" alt="" loading="lazy" decoding="async" data-opcional></span>
+                <img class="relicario-ornamento" src="img/ornamentos/arco-relicario-menor.svg" alt="" loading="lazy" decoding="async">
               </span>
               <span class="relicario-info">
                 <span class="relicario-meta"><span class="ano">(2024)</span><span class="categoria">Design</span></span>
@@ -456,8 +480,15 @@
                 <p class="rotulo-mono">( FICHA DO PROJETO · 2024 )</p>
                 <h2 class="ficha-titulo" id="ficha-revista-titulo">Revista digital</h2>
                 <p class="ficha-meta"><span>1º ano do Técnico em Informática</span><span>Em equipe</span><span>Design</span></p>
+                <ul class="ficha-galeria">
+                  <li data-opcional><a class="ampliar" href="img/projetos/revista/2.webp"><img src="img/projetos/revista/2.webp" alt="Revista digital" loading="lazy" decoding="async"></a></li>
+                  <li data-opcional><a class="ampliar" href="img/projetos/revista/3.webp"><img src="img/projetos/revista/3.webp" alt="Revista digital" loading="lazy" decoding="async"></a></li>
+                  <li data-opcional><a class="ampliar" href="img/projetos/revista/4.webp"><img src="img/projetos/revista/4.webp" alt="Revista digital" loading="lazy" decoding="async"></a></li>
+                  <li data-opcional><video src="img/projetos/revista/video.mp4" aria-label="Vídeo: Revista digital" muted loop playsinline controls preload="none"></video></li>
+                </ul>
                 <div class="ficha-estudo">
-                  <section class="estudo-bloco"><h3>Descrição</h3><p>Revista digital <em>Nature Magazine</em>, produzida em equipe no 1º ano do curso.</p></section>
+                  <section class="estudo-bloco"><h3>O projeto</h3><p>A <em>Nature Magazine</em> é uma revista digital criada em equipe no 1º ano do curso: um projeto editorial completo, com identidade visual própria e páginas pensadas para a leitura na tela.</p></section>
+                  <section class="estudo-bloco"><h3>Destaques</h3><ul class="destaques"><li>Identidade visual coesa da capa às páginas internas</li><li>Organização do conteúdo em seções e hierarquia clara de leitura</li><li>Trabalho em equipe, com divisão de tarefas e prazos</li></ul></section>
                   <section class="estudo-bloco"><h3>Tecnologias</h3><ul class="tags"><li>Canva</li></ul></section>
                 </div>
               </div>
@@ -466,8 +497,8 @@
           <li class="relicario-menor" data-cat="web">
             <button class="relicario-botao" type="button" data-abrir="ficha-primeiro-site" aria-haspopup="dialog">
               <span class="relicario-moldura">
-                <span class="relicario-imagem"><span class="relicario-letra" aria-hidden="true">P</span></span>
-                <img class="relicario-ornamento desenhar" src="img/ornamentos/arco-relicario-menor.svg" alt="">
+                <span class="relicario-imagem"><span class="relicario-letra" aria-hidden="true">P</span><img src="img/projetos/primeiro-site/1.webp" alt="" loading="lazy" decoding="async" data-opcional></span>
+                <img class="relicario-ornamento" src="img/ornamentos/arco-relicario-menor.svg" alt="" loading="lazy" decoding="async">
               </span>
               <span class="relicario-info">
                 <span class="relicario-meta"><span class="ano">(2024)</span><span class="categoria">Web</span></span>
@@ -480,6 +511,17 @@
                 <p class="rotulo-mono">( FICHA DO PROJETO · 2024 )</p>
                 <h2 class="ficha-titulo" id="ficha-primeiro-site-titulo">Primeiro site do projeto Tech/Edutec</h2>
                 <p class="ficha-meta"><span>1º ano do Técnico em Informática</span><span>Em equipe</span><span>Web</span></p>
+                <div class="expositor">
+                  <div class="monitor">
+                    <ul class="tela">
+                      <li data-opcional><a class="ampliar" href="img/projetos/primeiro-site/3.webp"><img src="img/projetos/primeiro-site/3.webp" alt="Primeiro site do projeto Tech/Edutec no computador" loading="lazy" decoding="async"></a></li>
+                      <li data-opcional><a class="ampliar" href="img/projetos/primeiro-site/4.webp"><img src="img/projetos/primeiro-site/4.webp" alt="Primeiro site do projeto Tech/Edutec no computador" loading="lazy" decoding="async"></a></li>
+                      <li data-opcional><a class="ampliar" href="img/projetos/primeiro-site/5.webp"><img src="img/projetos/primeiro-site/5.webp" alt="Primeiro site do projeto Tech/Edutec no computador" loading="lazy" decoding="async"></a></li>
+                      <li data-opcional><video src="img/projetos/primeiro-site/video.mp4" aria-label="Vídeo: Primeiro site do projeto Tech/Edutec" muted loop playsinline controls preload="none"></video></li>
+                    </ul>
+                  </div>
+                  <a class="celular ampliar" href="img/projetos/primeiro-site/2.webp" data-opcional><img src="img/projetos/primeiro-site/2.webp" alt="Primeiro site do projeto Tech/Edutec no celular" loading="lazy" decoding="async"></a>
+                </div>
                 <div class="ficha-estudo">
                   <section class="estudo-bloco"><h3>Descrição</h3><p>Primeiro site desenvolvido para o projeto Tech/Edutec.</p></section>
                   <section class="estudo-bloco"><h3>Tecnologias</h3><ul class="tags"><li>HTML</li><li>CSS</li></ul></section>
@@ -490,8 +532,8 @@
           <li class="relicario-menor" data-cat="hardware">
             <button class="relicario-botao" type="button" data-abrir="ficha-montagem" aria-haspopup="dialog">
               <span class="relicario-moldura">
-                <span class="relicario-imagem"><span class="relicario-letra" aria-hidden="true">M</span></span>
-                <img class="relicario-ornamento desenhar" src="img/ornamentos/arco-relicario-menor.svg" alt="">
+                <span class="relicario-imagem"><span class="relicario-letra" aria-hidden="true">M</span><img src="img/projetos/montagem/1.webp" alt="" loading="lazy" decoding="async" data-opcional></span>
+                <img class="relicario-ornamento" src="img/ornamentos/arco-relicario-menor.svg" alt="" loading="lazy" decoding="async">
               </span>
               <span class="relicario-info">
                 <span class="relicario-meta"><span class="categoria">Hardware</span></span>
@@ -504,6 +546,12 @@
                 <p class="rotulo-mono">( FICHA DO PROJETO )</p>
                 <h2 class="ficha-titulo" id="ficha-montagem-titulo">Montagem e manutenção de computadores</h2>
                 <p class="ficha-meta"><span>Prática do curso Técnico em Informática</span><span>Individual</span><span>Hardware</span></p>
+                <ul class="ficha-galeria">
+                  <li data-opcional><a class="ampliar" href="img/projetos/montagem/2.webp"><img src="img/projetos/montagem/2.webp" alt="Montagem e manutenção de computadores" loading="lazy" decoding="async"></a></li>
+                  <li data-opcional><a class="ampliar" href="img/projetos/montagem/3.webp"><img src="img/projetos/montagem/3.webp" alt="Montagem e manutenção de computadores" loading="lazy" decoding="async"></a></li>
+                  <li data-opcional><a class="ampliar" href="img/projetos/montagem/4.webp"><img src="img/projetos/montagem/4.webp" alt="Montagem e manutenção de computadores" loading="lazy" decoding="async"></a></li>
+                  <li data-opcional><video src="img/projetos/montagem/video.mp4" aria-label="Vídeo: Montagem e manutenção de computadores" muted loop playsinline controls preload="none"></video></li>
+                </ul>
                 <div class="ficha-estudo">
                   <section class="estudo-bloco"><h3>Descrição</h3><p>Prática de montagem, diagnóstico e manutenção de computadores.</p></section>
                 </div>
@@ -678,6 +726,7 @@
       <h3 class="rotulo-versalete subtitulo-centro">Certificados</h3>
       <ul class="certificados">
         <li class="certificado revelar">
+          <a class="certificado-imagem ampliar" href="img/certificados/cisco-networking-basics.webp" data-opcional><img src="img/certificados/cisco-networking-basics.webp" alt="Certificado Networking Basics, Cisco Networking Academy" loading="lazy" decoding="async"><span class="certificado-zoom">Ver certificado</span></a>
           <div class="certificado-vazio" aria-hidden="true">
             <span class="cv-titulo">Certificado</span><span class="cv-linha"></span><span class="cv-linha curta"></span>
             <span class="cv-nome">Cisco Networking Academy</span><svg class="cv-selo"><use href="#selo"/></svg>
@@ -739,7 +788,7 @@
       <canvas class="figura-pontos" id="figura-pontos" aria-hidden="true"></canvas>
       <p class="contato-palavra" aria-hidden="true">Olá!</p>
       <div class="contato-mesa">
-        <img class="guardanapo guardanapo-contato" src="img/ornamentos/guardanapo.svg" alt="">
+        <img class="guardanapo guardanapo-contato" src="img/ornamentos/guardanapo.svg" alt="" loading="lazy" decoding="async">
         <div class="envelope" id="envelope">
           <div class="envelope-cartao papel" id="cartao-contato" inert>
             <p class="rotulo-mono">( E-MAIL )</p>

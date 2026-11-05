@@ -187,7 +187,5 @@
 @keyframes surgir { from { opacity: 0; transform: translateY(10px); } }
 
 .outros:has(#filtro-web:checked) .relicario-menor:not([data-cat~="web"]),
-.outros:has(#filtro-jogos:checked) .relicario-menor:not([data-cat~="jogos"]),
-.outros:has(#filtro-iot:checked) .relicario-menor:not([data-cat~="iot"]),
 .outros:has(#filtro-design:checked) .relicario-menor:not([data-cat~="design"]),
 .outros:has(#filtro-hardware:checked) .relicario-menor:not([data-cat~="hardware"]) { display: none; }

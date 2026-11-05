@@ -25,16 +25,28 @@ function seguirMouse(canvas) {
 }
 
 function animar(canvas, desenhar, fps = 60) {
-  let visivel = false, ultimo = 0;
-  new IntersectionObserver(([e]) => visivel = e.isIntersecting).observe(canvas);
   if (parado) return desenhar(0, 0);
+  let pedido = 0, ultimo = 0;
   const quadro = (t) => {
-    requestAnimationFrame(quadro);
-    if (!visivel || document.hidden || t - ultimo < 1000 / fps - 2) return;
+    pedido = requestAnimationFrame(quadro);
+    if (t - ultimo < 1000 / fps - 2) return;
     desenhar(t, Math.min(64, t - ultimo));
     ultimo = t;
   };
-  requestAnimationFrame(quadro);
+  new IntersectionObserver(([e]) => {
+    cancelAnimationFrame(pedido);
+    if (e.isIntersecting) pedido = requestAnimationFrame(quadro);
+  }).observe(canvas);
+}
+
+function aoRedimensionar(montar) {
+  let largura = innerWidth, espera;
+  addEventListener("resize", () => {
+    if (celular && innerWidth === largura) return;
+    largura = innerWidth;
+    clearTimeout(espera);
+    espera = setTimeout(montar, 200);
+  });
 }
 
 function estrela(ctx, x, y, r, cor, brilho = 0) {
@@ -116,7 +128,7 @@ function iniciarCeu(canvas) {
   }
 
   montar();
-  addEventListener("resize", montar);
+  aoRedimensionar(montar);
   animar(canvas, desenhar, celular ? 30 : 45);
 }
 
@@ -217,7 +229,7 @@ function iniciarBuracoNegro(canvas) {
   }
 
   montar();
-  addEventListener("resize", montar);
+  aoRedimensionar(montar);
   animar(canvas, desenhar);
 }
 
@@ -288,7 +300,7 @@ function iniciarPalavraEmPontos(canvas) {
 
   montar();
   if (parado) pontos.forEach(p => { p.x = p.ax; p.y = p.ay; });
-  addEventListener("resize", montar);
+  aoRedimensionar(montar);
   animar(canvas, desenhar, 50);
 }
 

@@ -1,11 +1,39 @@
+const TEMPO_ATE_VIDEO = 40000;
+
+function tirarMidia(midia) {
+  midia.closest?.("[data-opcional]")?.remove();
+}
+document.addEventListener("error", (e) => tirarMidia(e.target), true);
+document.querySelectorAll("[data-opcional] img, img[data-opcional]").forEach((img) => {
+  if (img.complete && !img.naturalWidth) tirarMidia(img);
+});
+
+let trocaVideo;
 document.addEventListener("click", (e) => {
   const botao = e.target.closest("[data-abrir]");
-  if (botao) document.getElementById(botao.dataset.abrir)?.showModal();
+  if (!botao) return;
+  const ficha = document.getElementById(botao.dataset.abrir);
+  ficha.showModal();
+  ficha.querySelectorAll("video[preload='none']").forEach((video) => {
+    video.preload = "metadata";
+    video.load();
+  });
+  clearTimeout(trocaVideo);
+  trocaVideo = setTimeout(() => {
+    const video = ficha.querySelector(".tela video");
+    if (!ficha.open || !video) return;
+    video.closest(".tela").scrollLeft = video.parentElement.offsetLeft;
+    video.play().catch(() => {});
+  }, TEMPO_ATE_VIDEO);
 });
 
 for (const dialog of document.querySelectorAll("dialog")) {
   dialog.addEventListener("click", (e) => {
     if (e.target === dialog) dialog.close();
+  });
+  dialog.addEventListener("close", () => {
+    clearTimeout(trocaVideo);
+    dialog.querySelectorAll("video").forEach(video => video.pause());
   });
 }
 
@@ -45,7 +73,7 @@ document.addEventListener("click", (e) => {
   const link = e.target.closest("a.ampliar");
   if (!link) return;
   e.preventDefault();
-  grupo = [...link.closest("ul, div").querySelectorAll("a.ampliar")];
+  grupo = [...(link.closest(".expositor") ?? link.closest("ul, div")).querySelectorAll("a.ampliar")];
   lightbox.querySelectorAll(".lightbox-nav").forEach(b => b.hidden = grupo.length < 2);
   mostrarImagem(grupo.indexOf(link));
   lightbox.showModal();

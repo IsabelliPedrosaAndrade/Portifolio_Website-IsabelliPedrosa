@@ -65,13 +65,6 @@
   letter-spacing: .02em;
 }
 
-.lista-estrela li { position: relative; padding-left: 1.45em; margin-bottom: .45em; }
-.lista-estrela li::before {
-  content: "✦";
-  position: absolute; left: 0; top: .02em;
-  color: var(--violeta);
-}
-
 .ano { font: 500 .78rem var(--f-mono); color: var(--apagado); }
 
 .canto { position: absolute; width: 64px; height: 64px; color: var(--violeta); pointer-events: none; }

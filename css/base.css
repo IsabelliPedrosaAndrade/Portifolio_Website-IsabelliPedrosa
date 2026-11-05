@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Lavishly Yours";
-  src: url("../fonts/LavishlyYours-Regular.ttf") format("truetype");
+  src: url("../fonts/LavishlyYours-Regular.woff2") format("woff2");
   font-display: swap;
 }
 

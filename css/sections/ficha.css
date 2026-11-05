@@ -62,16 +62,22 @@
   color: var(--tinta);
 }
 
-.ficha-galeria {
+.ficha-galeria, .tela {
+  position: relative;
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 100%;
-  gap: 12px;
-  margin-top: 28px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--violeta) transparent;
 }
-.ficha-galeria li { scroll-snap-align: start; }
+.ficha-galeria li, .tela li { scroll-snap-align: start; }
+.ficha-galeria a, .tela a, .celular { display: block; cursor: zoom-in; }
+
+.ficha-galeria { gap: 12px; margin-top: 28px; }
+.ficha-galeria:not(:has(li)) { display: none; }
 .ficha-galeria img, .ficha-galeria video {
   width: 100%;
   aspect-ratio: 16 / 10;
@@ -79,10 +85,69 @@
   background: #1A1F3A;
   border: 1px solid rgba(42, 50, 133, .3);
 }
-.ficha-galeria a { display: block; cursor: zoom-in; }
 
-.ficha-video { margin-top: 24px; aspect-ratio: 16 / 9; }
-.ficha-video iframe, .ficha-video video { width: 100%; height: 100%; border: 0; }
+.expositor {
+  position: relative;
+  margin: 30px 0 40px;
+  padding-right: 14%;
+}
+.expositor:not(:has(.celular)) { padding-right: 0; }
+.expositor:not(:has(.tela li)) { padding: 0; }
+.expositor:not(:has(.tela li)) .monitor { display: none; }
+.expositor:not(:has(.tela li)):not(:has(.celular)) { display: none; }
+
+.monitor {
+  position: relative;
+  padding: 10px 10px 16px;
+  background: linear-gradient(#22283F, #161A2B);
+  border-radius: 12px 12px 6px 6px;
+  box-shadow: 0 0 0 1px #0B0D14, 0 18px 40px -18px rgba(11, 13, 20, .8);
+}
+.monitor::after {
+  content: "";
+  position: absolute; top: 100%; left: 37%;
+  width: 26%; height: 24px;
+  background: linear-gradient(#1D2236, #2A3050);
+  clip-path: polygon(22% 0, 78% 0, 100% 100%, 0 100%);
+}
+.tela { aspect-ratio: 16 / 10; background: #0B0D14; border-radius: 3px; }
+.tela img, .tela video { width: 100%; height: 100%; object-fit: cover; object-position: top; background: #0B0D14; }
+.tela::scroll-button(left), .tela::scroll-button(right) {
+  content: "‹";
+  position: absolute; top: 50%;
+  width: 36px; height: 36px;
+  font: 1.4rem/1 var(--f-texto);
+  color: var(--osso);
+  background: rgba(11, 13, 20, .7);
+  border: 1px solid rgba(124, 136, 238, .5);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.tela::scroll-button(left) { left: 8px; }
+.tela::scroll-button(right) { content: "›"; right: 8px; }
+.tela::scroll-button(*):disabled { opacity: 0; }
+
+.celular {
+  position: absolute; right: 0; bottom: -4px;
+  width: 23%;
+  aspect-ratio: 9 / 19.5;
+  overflow: hidden;
+  background: #0B0D14;
+  border: 5px solid #161A2B;
+  border-radius: 20px;
+  box-shadow: 0 0 0 1px #2A3050, -10px 16px 30px -12px rgba(11, 13, 20, .8);
+}
+.celular::before {
+  content: "";
+  position: absolute; top: 6px; left: 50%;
+  width: 30%; height: 6px;
+  translate: -50% 0;
+  background: #161A2B;
+  border-radius: 99px;
+  z-index: 1;
+}
+.celular img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.expositor:not(:has(.tela li)) .celular { position: relative; width: min(220px, 60%); margin: 0 auto; }
 
 .ficha-estudo { display: grid; gap: 24px; margin-top: 34px; }
 .estudo-bloco h3 {
@@ -94,13 +159,15 @@
 }
 .estudo-bloco p { color: var(--tinta); line-height: 1.7; }
 .estudo-bloco .tags li { color: var(--tinta); border-color: rgba(42, 50, 133, .4); }
-.estudo-destaque { padding: 18px 20px; background: rgba(42, 50, 133, .07); border: 1px dashed rgba(42, 50, 133, .35); }
+.destaques li { position: relative; padding-left: 1.4em; color: var(--tinta); line-height: 1.6; }
+.destaques li + li { margin-top: .35em; }
+.destaques li::before { content: "✦"; position: absolute; left: 0; color: var(--violeta); }
 
 .ficha-acoes { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
 
 @media (min-width: 760px) {
   .ficha-estudo { grid-template-columns: 1fr 1fr; gap: 28px 40px; }
-  .estudo-destaque, .ficha-estudo > :first-child:nth-last-child(odd) { grid-column: 1 / -1; }
+  .ficha-estudo > :first-child:nth-last-child(odd) { grid-column: 1 / -1; }
 }
 
 .lightbox {
